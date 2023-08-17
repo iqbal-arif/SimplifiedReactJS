@@ -11,10 +11,10 @@ function App() {
   return (
     <div className="large" id="largeDiv">
       <label htmlFor="inputId">First label</label>
-      {/* Does not change value 3 */}
+      //Does not change value 3
       <input id="inputId" type="number" value={3} />
-      {/* Allows to change value 3 to any number */}
-      input id="inputId" type="number" defaultValue={3} />
+      //Allows to change value 3 to any number
+      <input id="inputId" type="number" defaultValue={3} />
     </div>
   );
 }
