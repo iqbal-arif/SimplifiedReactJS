@@ -46,7 +46,8 @@ function App() {
       >
         The list Item
       </TodoListItem>
-      <TodoListItemClass isComplete={true}>
+      <br />
+      <TodoListItemClass isComplete={true} name="Class Item One">
         The list Item Class
       </TodoListItemClass>
     </div>
