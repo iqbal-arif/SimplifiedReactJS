@@ -14,6 +14,7 @@ export function TodoListItem({ children, name, htmlFor, value, isComplete }) {
           <label htmlFor={htmlFor}>{children}</label>
         </il>
       </ul>
+      {/* Teacher'S Solution */}
       <label>
         <input type="checkbox" checked={isComplete} />
         {children}
