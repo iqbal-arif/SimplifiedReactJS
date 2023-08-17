@@ -2,7 +2,7 @@ import React from "react";
 import { TodoList } from "./TodoList";
 import { TodoListClass } from "./TodoListClass";
 import { MyName } from "./MyName";
-
+import { NamePropDestructure } from "./PropDestructure";
 function App() {
   /*
   Lesson 9: Thinking in components
@@ -33,6 +33,7 @@ function App() {
       <MyName name="Custom Name" age={45} />
       <h1>ToDo List</h1>
       <TodoListClass />
+      <NamePropDestructure name="Prop Destructure Ex." isProgrammer={true} />
     </div>
   );
 }
