@@ -55,7 +55,7 @@ function App() {
       <TodoListItemClass isComplete={true} name="Class Item One">
         The list Item Class
       </TodoListItemClass>
-      <img src={img} />
+      <img src={Capture} />
     </div>
   );
 }
