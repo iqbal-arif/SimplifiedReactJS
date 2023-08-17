@@ -30,7 +30,7 @@ function App() {
   //Lesson 11: Creating Components
   return (
     <div>
-      <MyName />
+      <MyName name="Custom Name" age={45} />
       <h1>ToDo List</h1>
       <TodoListClass />
     </div>

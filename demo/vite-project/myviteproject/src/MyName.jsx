@@ -1,7 +1,7 @@
-export function MyName() {
+export function MyName(props) {
   return (
     <>
-      <h1>Arif Iqbal</h1>
+      <h1>{props.name}</h1>
       <h2>First Vite React Project</h2>
     </>
   );
