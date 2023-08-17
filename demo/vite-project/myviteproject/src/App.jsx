@@ -8,6 +8,8 @@ import { TodoListItem } from "./TodoListItem";
 import { TodoListItemClass } from "./TodoListItemClass";
 // Importing css file
 import "./style.css";
+// Importing Image
+import Capture from "./Capture.png";
 
 function App() {
   /*
@@ -53,6 +55,7 @@ function App() {
       <TodoListItemClass isComplete={true} name="Class Item One">
         The list Item Class
       </TodoListItemClass>
+      <img src={img} />
     </div>
   );
 }
