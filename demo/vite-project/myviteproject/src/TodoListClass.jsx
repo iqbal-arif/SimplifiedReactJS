@@ -3,7 +3,7 @@ export class TodoListClass extends React.Component {
   render() {
     return (
       <ul>
-        <li>item1</li>
+        <li>{this.props.name}</li>
         <li>item2</li>
         <li>item3</li>
         <li>item4</li>

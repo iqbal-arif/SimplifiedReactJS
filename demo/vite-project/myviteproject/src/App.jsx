@@ -3,6 +3,8 @@ import { TodoList } from "./TodoList";
 import { TodoListClass } from "./TodoListClass";
 import { MyName } from "./MyName";
 import { NamePropDestructure } from "./PropDestructure";
+import { ChildProp } from "./ChildProp";
+import { TodoListItem } from "./TodoListItem";
 function App() {
   /*
   Lesson 9: Thinking in components
@@ -32,8 +34,17 @@ function App() {
     <div>
       <MyName name="Custom Name" age={45} />
       <h1>ToDo List</h1>
-      <TodoListClass />
+      <TodoListClass name="Item One" />
       <NamePropDestructure name="Prop Destructure Ex." isProgrammer={true} />
+      <ChildProp>Children Prop Name</ChildProp>
+      <TodoListItem
+        isComplete={true}
+        htmlFor="toDoList"
+        name="listItem"
+        value="item"
+      >
+        The list Item
+      </TodoListItem>
     </div>
   );
 }
