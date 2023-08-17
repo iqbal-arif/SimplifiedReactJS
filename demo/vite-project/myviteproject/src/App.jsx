@@ -6,6 +6,9 @@ import { NamePropDestructure } from "./PropDestructure";
 import { ChildProp } from "./ChildProp";
 import { TodoListItem } from "./TodoListItem";
 import { TodoListItemClass } from "./TodoListItemClass";
+// Importing css file
+import "./style.css";
+
 function App() {
   /*
   Lesson 9: Thinking in components
