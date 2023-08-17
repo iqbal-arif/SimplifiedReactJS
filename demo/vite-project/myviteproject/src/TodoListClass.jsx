@@ -1,5 +1,5 @@
 import React from "react";
-class TodoListClass extends React.Component {
+export class TodoListClass extends React.Component {
   render() {
     return (
       <ul>
