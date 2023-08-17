@@ -1,4 +1,4 @@
-function TodoList() {
+export function TodoList() {
   return (
     <ul>
       <li>item1</li>

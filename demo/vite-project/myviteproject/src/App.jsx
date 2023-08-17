@@ -1,3 +1,6 @@
+import React from "react";
+import { TodoList } from "./TodoList";
+
 function App() {
   /*
   Lesson 9: Thinking in components
@@ -26,6 +29,7 @@ function App() {
   return (
     <div>
       <h1>ToDo List</h1>
+      <TodoList />
     </div>
   );
 }
