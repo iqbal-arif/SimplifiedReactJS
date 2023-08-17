@@ -1,4 +1,7 @@
 function App() {
+  /*
+  Lesson 9: Thinking in components
+
   return React.createElement("h1", { id: "5" }, "Hello World");
   // Both, above and below statment writes same output.
   // return <h1 id="5">Hello World</h1>;
@@ -7,7 +10,7 @@ function App() {
   // Add a label with the for prop set to inpuId adn any text
   // Add an input with the id inputId, type number, and value of 3 as a number.
   // To be able to allow the default value 3 use defaultValue={3} instead of value={3}
-
+  Lesson 10 : JSX Basics
   return (
     <div className="large" id="largeDiv">
       <label htmlFor="inputId">First label</label>
@@ -15,6 +18,14 @@ function App() {
       <input id="inputId" type="number" value={3} />
       //Allows to change value 3 to any number
       <input id="inputId" type="number" defaultValue={3} />
+    </div>
+  );
+  */
+
+  //Lesson 11: Creating Components
+  return (
+    <div>
+      <h1>ToDo List</h1>
     </div>
   );
 }
