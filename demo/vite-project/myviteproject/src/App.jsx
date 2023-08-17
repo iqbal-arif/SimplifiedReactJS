@@ -5,6 +5,7 @@ import { MyName } from "./MyName";
 import { NamePropDestructure } from "./PropDestructure";
 import { ChildProp } from "./ChildProp";
 import { TodoListItem } from "./TodoListItem";
+import { TodoListItemClass } from "./TodoListItemClass";
 function App() {
   /*
   Lesson 9: Thinking in components
@@ -45,6 +46,9 @@ function App() {
       >
         The list Item
       </TodoListItem>
+      <TodoListItemClass isComplete={true}>
+        The list Item Class
+      </TodoListItemClass>
     </div>
   );
 }
