@@ -1,5 +1,7 @@
 import React from "react";
 import { TodoList } from "./TodoList";
+import { TodoListClass } from "./TodoListClass";
+import { MyName } from "./MyName";
 
 function App() {
   /*
@@ -28,8 +30,9 @@ function App() {
   //Lesson 11: Creating Components
   return (
     <div>
+      <MyName />
       <h1>ToDo List</h1>
-      <TodoList />
+      <TodoListClass />
     </div>
   );
 }
