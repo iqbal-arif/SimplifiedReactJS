@@ -6,10 +6,11 @@ import { NamePropDestructure } from "./PropDestructure";
 import { ChildProp } from "./ChildProp";
 import { TodoListItem } from "./TodoListItem";
 import { TodoListItemClass } from "./TodoListItemClass";
+import user from "./user.json";
 // Importing css file
 import "./style.css";
 // Importing Image
-import Capture from "./Capture.png";
+import img from "./Capture.jpg";
 
 function App() {
   /*
@@ -55,7 +56,9 @@ function App() {
       <TodoListItemClass isComplete={true} name="Class Item One">
         The list Item Class
       </TodoListItemClass>
-      <img src={Capture} />
+      <img src={img} />
+      {/* JSON import */}
+      <p>{JSON.stringify(user)}</p>
     </div>
   );
 }
