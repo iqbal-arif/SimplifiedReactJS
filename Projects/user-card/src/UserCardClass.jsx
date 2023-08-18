@@ -1,19 +1,19 @@
 import React from "react";
-import user from "./user.json";
+// import user from "./user.json";
 
 export class UserCardClass extends React.Component {
   render() {
     return (
       <>
         <div className="card">
-          <h2 className="name">{user.name}</h2>
+          <h2 className="name">{this.props.name}</h2>
           <div className="body">
             <div className="label">Age:</div>
-            <div>{user.age}</div>
+            <div>{this.props.age}</div>
             <div className="label">Phone:</div>
-            <div>{user.phoneNumber}</div>
+            <div>{this.props.phoneNumber}</div>
             <div className="label">Address:</div>
-            <div>{user.address}</div>
+            <div>{this.props.address}</div>
           </div>
         </div>
       </>
