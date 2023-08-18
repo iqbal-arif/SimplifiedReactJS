@@ -14,7 +14,8 @@ function App() {
       <h2>Function Component</h2>
       <UserCard />
       <h2>Class Component</h2>
-      <UserCardClass>{JSON.stringify(user)}</UserCardClass>
+      {/* <UserCardClass>{JSON.stringify(user)}</UserCardClass> */}
+      <UserCardClass />
     </>
   );
 }
