@@ -1,5 +1,6 @@
 import "./user.css";
-// import { UserCard } from "./UserCard";
+import user from "./user.json";
+import { UserCard } from "./UserCard";
 import { UserCardClass } from "./UserCardClass";
 function App() {
   return (
@@ -9,9 +10,11 @@ function App() {
       <p>{JSON.stringify(user.name, user.age)}</p>
       <p>{JSON.stringify(user.age)}</p>
       <p>{JSON.stringify(user.phoneNumber)}</p>
-      <p>{JSON.stringify(user.address)}</p> */}
+    <p>{JSON.stringify(user.address)}</p> */}
+      <h2>Function Component</h2>
       <UserCard />
-      {/* {JSON.stringify(user.name)}</UserCard> */}
+      <h2>Class Component</h2>
+      <UserCardClass>{JSON.stringify(user)}</UserCardClass>
     </>
   );
 }
