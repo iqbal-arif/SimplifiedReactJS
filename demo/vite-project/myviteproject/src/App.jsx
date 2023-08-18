@@ -10,7 +10,7 @@ import user from "./user.json";
 // Importing css file
 import "./style.css";
 // Importing Image
-import img from "./Capture.jpg";
+import img from "./Capture.png";
 
 function App() {
   /*
