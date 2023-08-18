@@ -1,10 +1,16 @@
-import "/user.css";
-import user from "./user.json";
+import "./user.css";
+import { UserCard } from "./UserCard";
 function App() {
   return (
     <>
-      <p>This is User Card Project</p>
-      <p>{JSON.stringify(user)}</p>
+      <h2>This is User Card Project</h2>
+      {/* <p>{JSON.stringify(user)}</p>
+      <p>{JSON.stringify(user.name, user.age)}</p>
+      <p>{JSON.stringify(user.age)}</p>
+      <p>{JSON.stringify(user.phoneNumber)}</p>
+      <p>{JSON.stringify(user.address)}</p> */}
+      <UserCard />
+      {/* {JSON.stringify(user.name)}</UserCard> */}
     </>
   );
 }
