@@ -1,10 +1,6 @@
 import user from "./user.json";
 
 export function UserCard() {
-  //   const userData = user.map((user) => {
-  //     console.log(user);
-  //   });
-  //   console.log(userData);
   return (
     <>
       <div className="card">

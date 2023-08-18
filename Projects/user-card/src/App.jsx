@@ -1,5 +1,6 @@
 import "./user.css";
-import { UserCard } from "./UserCard";
+// import { UserCard } from "./UserCard";
+import { UserCardClass } from "./UserCardClass";
 function App() {
   return (
     <>
