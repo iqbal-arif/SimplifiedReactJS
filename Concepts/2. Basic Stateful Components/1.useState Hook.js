@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 function App() {
-  const [name, setName] = useState("Arif");
+  const [name, setName] = useState("useState");
   console.log("Render", name);
   //useState sets value as an Array
   /*
@@ -9,7 +9,7 @@ function App() {
     const setName = values[1] // Second value of array
     */
   function handleClick() {
-    setName("Iqbal");
+    setName("useState Hook");
   }
   // On click the entier component is re-render on state variable change
   return <h1 onClick={handleClick}>Hi {name}</h1>;
