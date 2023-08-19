@@ -38,6 +38,7 @@ function App() {
 /*********************************************** */
   /*
 Lesson 17 useState Hook
+useState needs to be stated initially in the function before anything else
 */
   const [name, setName] = useState("useState");
   console.log("Render", name);
