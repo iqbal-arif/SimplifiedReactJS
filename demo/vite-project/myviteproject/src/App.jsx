@@ -73,6 +73,8 @@ Lesson 17 useState Hook
       {/* <img src={img} /> */}
       {/* JSON import */}
       <p>{JSON.stringify(user)}</p>
+      {/* lesson17: useState */}
+      <h1 onClick={handleClick}>Hi {name}</h1>;
     </div>
   );
 }
