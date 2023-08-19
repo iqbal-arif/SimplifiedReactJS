@@ -73,9 +73,14 @@ useState needs to be stated initially in the function before anything else
     // console.log("After 2", attempt)
 
     /*******Correct way of incrementing is by using inline function */
+    //Incrementing ONCE
     setAttempt((currentAttempt) => {
       return currentAttempt + 1;
-    }); //incrementing attempt on every click
+      //Incrementing Second time the last value
+    }); //incrementing attempt on every click First Time
+    setAttempt((currentAttempt) => {
+      return currentAttempt + 1;
+    }); //incrementing attempt on every click Second Time
   }
   /**************L-17********************************* */
 
