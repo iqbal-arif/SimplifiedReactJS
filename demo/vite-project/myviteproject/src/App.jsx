@@ -38,7 +38,7 @@ function App() {
   /*
 Lesson 17 useState Hook
 */
-  const [name, setName] = useState("Arif");
+  const [name, setName] = useState("useState");
   console.log("Render", name);
   //useState sets value as an Array
   /*
@@ -46,7 +46,7 @@ Lesson 17 useState Hook
   const setName = values[1] // Second value of array
   */
   function handleClick() {
-    setName("Iqbal");
+    setName("useState Hook");
   }
   /*********************************************** */
 
