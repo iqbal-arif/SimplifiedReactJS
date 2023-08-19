@@ -10,7 +10,7 @@ import user from "./user.json";
 // Importing css file
 import "./style.css";
 // Importing Image
-import img from "./Capture.png";
+// import img from "./Capture.png";
 
 function App() {
   /*
@@ -34,7 +34,21 @@ function App() {
       <input id="inputId" type="number" defaultValue={3} />
     </div>
   );
+/*********************************************** */
+  /*
+Lesson 17 useState Hook
+*/
+  const [name, setName] = useState("Arif");
+  console.log("Render", name);
+  //useState sets value as an Array
+  /*
+  const name = values[0] // first value of array
+  const setName = values[1] // Second value of array
   */
+  function handleClick() {
+    setName("Iqbal");
+  }
+  /*********************************************** */
 
   //Lesson 11: Creating Components
   return (
@@ -56,7 +70,7 @@ function App() {
       <TodoListItemClass isComplete={true} name="Class Item One">
         The list Item Class
       </TodoListItemClass>
-      <img src={img} />
+      {/* <img src={img} /> */}
       {/* JSON import */}
       <p>{JSON.stringify(user)}</p>
     </div>
