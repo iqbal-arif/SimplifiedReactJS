@@ -62,6 +62,7 @@ useState needs to be stated initially in the function before anything else
   function handleClick() {
     // setName("useState Hook onClick value");// this state goes with slowGetter functions
     setName("modified State");
+    setAttempt(attempt + 1);
   }
   /*********************************************** */
 
@@ -90,8 +91,8 @@ useState needs to be stated initially in the function before anything else
       <p>{JSON.stringify(user)}</p>
       {/* lesson17: useState */}
       <h1 onClick={handleClick}>
-        `Hi {name}
-        Attemp: {attempt}`
+        Hi {name}
+        Attemp: {attempt}
       </h1>
       ;
     </div>
