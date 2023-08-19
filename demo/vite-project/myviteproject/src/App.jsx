@@ -81,6 +81,8 @@ useState needs to be stated initially in the function before anything else
     setAttempt((currentAttempt) => {
       return currentAttempt + 1;
     }); //incrementing attempt on every click Second Time
+    //To modify the previous value after modification use inline function.
+    //Otherwise use regular setAttempt initial value that stays the same.
   }
   /**************L-17********************************* */
 
