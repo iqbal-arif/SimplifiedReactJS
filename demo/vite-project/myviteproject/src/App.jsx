@@ -57,7 +57,7 @@ useState needs to be stated initially in the function before anything else
   const setName = values[1] // Second value of array
   */
   function handleClick() {
-    setName("useState Hook");
+    setName("useState Hook onClick value");
   }
   /*********************************************** */
 
