@@ -50,7 +50,9 @@ useState needs to be stated initially in the function before anything else
   //   console.log("inline useState function");
   //   return "useState invoked by inline function";
   // }); // changing above to inline funciton
-  const [name, setName] = useState(slowGetter); // change the value by invoking function. This function runs once at change state.
+  // const [name, setName] = useState(slowGetter); // change the value by invoking function. This function runs once at change state.
+  const [name, setName] = useState("initial State"); // change the state.
+  const [attempt, setAttempt] = useState(1); // change the state.
 
   //useState sets value as an Array
   /*
@@ -58,7 +60,8 @@ useState needs to be stated initially in the function before anything else
   const setName = values[1] // Second value of array
   */
   function handleClick() {
-    setName("useState Hook onClick value");
+    // setName("useState Hook onClick value");// this state goes with slowGetter functions
+    setName("modified State");
   }
   /*********************************************** */
 
@@ -86,7 +89,11 @@ useState needs to be stated initially in the function before anything else
       {/* JSON import */}
       <p>{JSON.stringify(user)}</p>
       {/* lesson17: useState */}
-      <h1 onClick={handleClick}>Hi {name}</h1>;
+      <h1 onClick={handleClick}>
+        Hi {name}
+        {attempt}
+      </h1>
+      ;
     </div>
   );
 }
