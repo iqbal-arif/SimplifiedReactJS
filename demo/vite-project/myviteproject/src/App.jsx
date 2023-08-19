@@ -1,18 +1,22 @@
 import React from "react";
 import { TodoList } from "./TodoList";
 import { TodoListClass } from "./TodoListClass";
+import { useState } from "react";
 import { MyName } from "./MyName";
 import { NamePropDestructure } from "./PropDestructure";
 import { ChildProp } from "./ChildProp";
 import { TodoListItem } from "./TodoListItem";
 import { TodoListItemClass } from "./TodoListItemClass";
 import user from "./user.json";
-import { useState } from "react";
 // Importing css file
 import "./style.css";
 // Importing Image
 // import img from "./Capture.png";
-
+/****Function for lesson 17 to change state*/
+function slowGetter() {
+  //Really slow code
+  return "Slow useState";
+}
 function App() {
   /*
   Lesson 9: Thinking in components
