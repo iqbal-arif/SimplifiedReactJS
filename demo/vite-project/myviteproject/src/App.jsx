@@ -39,7 +39,7 @@ function App() {
       <input id="inputId" type="number" defaultValue={3} />
     </div>
   );
-/*********************************************** */
+/**************L-17********************************* */
   /*
 Lesson 17 useState Hook
 useState needs to be stated initially in the function before anything else
@@ -62,9 +62,22 @@ useState needs to be stated initially in the function before anything else
   function handleClick() {
     // setName("useState Hook onClick value");// this state goes with slowGetter functions
     setName("modified State");
-    setAttempt(attempt + 1); //incrementing attempt on every click
+
+    /********Running Multiple states to increment the Attempts That does not work */
+    // console.log("Before", attempt)
+    //Incrementing initial attempt to 2
+    // setAttempt(attempt + 1); //incrementing attempt on every click
+    // console.log("After 1", attempt)
+    //Hoping to increment the last value of attempt 2 to 3. That does not work. As the iniital value of the variable attempt states the same in first round of the whole function.
+    // setAttempt(attempt + 1); //incrementing attempt on every click
+    // console.log("After 2", attempt)
+
+    /*******Correct way of incrementing is by using inline function */
+    setAttempt((currentAttempt) => {
+      return currentAttempt + 1;
+    }); //incrementing attempt on every click
   }
-  /*********************************************** */
+  /**************L-17********************************* */
 
   //Lesson 11: Creating Components
   return (
