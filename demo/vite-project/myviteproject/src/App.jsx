@@ -15,7 +15,7 @@ import "./style.css";
 /****Function for lesson 17 to change state*/
 function slowGetter() {
   //Really slow code
-  return "SlowGetter useState Function";
+  return "SlowGetter useState Function runs once only";
 }
 function App() {
   /*
@@ -46,10 +46,11 @@ useState needs to be stated initially in the function before anything else
 */
   // const [name, setName] = useState("useState");// defines the default initial useState value
   // const [name, setName] = useState(slowGetter()); // change the value by invoking function. This function runs every time when state is chagned.
-  const [name, setName] = useState(() => {
-    console.log("inline useState function");
-    return "useState invoked by inline function";
-  }); // changing above to inline funciton
+  // const [name, setName] = useState(() => {
+  //   console.log("inline useState function");
+  //   return "useState invoked by inline function";
+  // }); // changing above to inline funciton
+  const [name, setName] = useState(slowGetter); // change the value by invoking function. This function runs once at change state.
 
   //useState sets value as an Array
   /*
