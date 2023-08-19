@@ -15,7 +15,7 @@ import "./style.css";
 /****Function for lesson 17 to change state*/
 function slowGetter() {
   //Really slow code
-  return "Slow useState";
+  return "SlowGetter useState Function";
 }
 function App() {
   /*
@@ -44,8 +44,8 @@ function App() {
 Lesson 17 useState Hook
 useState needs to be stated initially in the function before anything else
 */
-  const [name, setName] = useState("useState");
-  console.log("Render", name);
+  // const [name, setName] = useState("useState");// defines the default initial useState value
+  const [name, setName] = useState(slowGetter()); // change the value by invoking function
   //useState sets value as an Array
   /*
   const name = values[0] // first value of array
