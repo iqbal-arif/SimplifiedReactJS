@@ -47,7 +47,7 @@ useState needs to be stated initially in the function before anything else
   // const [name, setName] = useState("useState");// defines the default initial useState value
   // const [name, setName] = useState(slowGetter()); // change the value by invoking function. This function runs every time when state is chagned.
   const [name, setName] = useState(() => {
-    console.log("inline slowGetter function");
+    console.log("inline useState function");
     return "useState invoked by inline function";
   }); // changing above to inline funciton
 
