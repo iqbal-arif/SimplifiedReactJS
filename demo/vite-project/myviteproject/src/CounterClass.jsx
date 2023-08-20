@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
-export default class Counter extends React.Component {
+export default class CounterClass extends React.Component {
   constructor(props) {
     super(props);
 
