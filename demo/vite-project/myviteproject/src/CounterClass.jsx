@@ -6,11 +6,10 @@ export default class Counter extends React.Component {
     super(props);
 
     this.state = {
-      name: "You are Rendering Class Component",
-      componentCount: 25,
+      count: 1,
     };
   }
   render() {
-    return <h3></h3>;
+    return <h3>{this.state.count}</h3>;
   }
 }
