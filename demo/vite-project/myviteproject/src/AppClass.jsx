@@ -23,7 +23,7 @@ export default class App extends React.Component {
         onClick={() =>
           this.setState(
             { name: "Modifying AppClass State" },
-            { componentCount }
+            { componentCount: "26" }
           )
         }
       >
