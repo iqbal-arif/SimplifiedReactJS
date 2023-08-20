@@ -21,13 +21,14 @@ export default class App extends React.Component {
       //Defining onClick arrow function as a line function.
       <h1
         onClick={() =>
-          this.setState(
-            { name: "Modifying AppClass State" },
-            { componentCount: "26" }
-          )
+          this.setState({
+            name: "Modifying AppClass State",
+            componentCount: 26,
+          })
         }
       >
         Hello {this.state.name}
+        {this.state.componentCount}
       </h1>
     );
   }
