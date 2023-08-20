@@ -1,5 +1,5 @@
-export default App{
-    render(){
-        return <h1>Hello App Class Component</h1>
-    }
+export default class App {
+  render() {
+    return <h1>Hello App Class Component</h1>;
+  }
 }
