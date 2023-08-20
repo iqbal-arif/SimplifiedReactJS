@@ -117,7 +117,7 @@ useState needs to be stated initially in the function before anything else
         Attemp: {attempt}
       </h1>
       <Counter />
-      {/* <CounterClass /> */}
+      <CounterClass />
     </div>
   );
 }
