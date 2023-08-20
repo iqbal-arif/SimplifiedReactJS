@@ -6,6 +6,7 @@ export default class App extends React.Component {
 
     this.state = {
       name: "You are Rendering Class Component",
+      componentCount: 25,
     };
   }
   render() {
@@ -18,7 +19,14 @@ export default class App extends React.Component {
 
     return (
       //Defining onClick arrow function as a line function.
-      <h1 onClick={() => this.setState({ name: "Modifying AppClass State" })}>
+      <h1
+        onClick={() =>
+          this.setState(
+            { name: "Modifying AppClass State" },
+            { componentCount }
+          )
+        }
+      >
         Hello {this.state.name}
       </h1>
     );
