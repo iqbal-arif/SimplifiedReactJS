@@ -14,6 +14,10 @@ export default class App extends React.Component {
     /*
     const handleClick = () =>{
         this.setState({ name: "Modifying AppClass State" })
+        this.setState(currentCount => {
+            return {componentCount: currentCount.componentCount+1 }})
+        this.setState(currentCount => {
+            return {componentCount: currentCount.componentCount+1 }})
     }*/
     // replace the inline arrow function with onClick={handleClick}
 
