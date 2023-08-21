@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+// import { useState } from "react";
 
 export default class CounterClass extends React.Component {
   constructor(props) {
@@ -11,11 +11,13 @@ export default class CounterClass extends React.Component {
   }
   render() {
     const handleClick = () => {
+      //Incrementing once on each click
       this.setState((currentCount) => {
-        return { componentCount: currentCount.count + 1 };
+        return { count: currentCount.count + 1 };
       });
+      //incrementing once again on or after previous click
       this.setState((currentCount) => {
-        return { componentCount: currentCount.componentCount + 1 };
+        return { count: currentCount.count + 1 };
       });
     };
     return <h3 onClick={handleClick}>{this.state.count}</h3>;
