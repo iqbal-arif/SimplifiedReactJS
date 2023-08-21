@@ -9,6 +9,7 @@ import { TodoListItem } from "./TodoListItem";
 import { TodoListItemClass } from "./TodoListItemClass";
 import user from "./user.json";
 import { Counter } from "./Counter";
+import { Input } from "./Input";
 // Importing css file
 import "./style.css";
 // Importing Image
@@ -116,6 +117,8 @@ useState needs to be stated initially in the function before anything else
         Attemp: {attempt}
       </h1>
       <Counter />
+      <p>Input Event Listener</p>
+      <Input />
     </div>
   );
 }

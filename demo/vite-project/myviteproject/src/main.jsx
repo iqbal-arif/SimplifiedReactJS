@@ -1,9 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-// import App from "./App.jsx";
-import CounterClass from "./CounterClass";
+import App from "./App.jsx";
 
-ReactDOM.createRoot(document.getElementById("root")).render(<CounterClass />);
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
 
 //For AppClass.jsx and CoutnerClass.jsx Component class import these component in class in main.jsx as follows
 //For AppClass

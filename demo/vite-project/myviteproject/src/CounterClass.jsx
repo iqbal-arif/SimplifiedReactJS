@@ -6,7 +6,7 @@ export default class CounterClass extends React.Component {
     super(props);
 
     this.state = {
-      count: 1,
+      count: 0,
     };
   }
   render() {
