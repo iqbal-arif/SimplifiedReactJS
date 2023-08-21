@@ -10,6 +10,14 @@ export default class CounterClass extends React.Component {
     };
   }
   render() {
-    return <h3>{this.state.count}</h3>;
+    const handleClick = () => {
+      this.setState((currentCount) => {
+        return { componentCount: currentCount.count + 1 };
+      });
+      this.setState((currentCount) => {
+        return { componentCount: currentCount.componentCount + 1 };
+      });
+    };
+    return <h3 onClick={handleClick}>{this.state.count}</h3>;
   }
 }
