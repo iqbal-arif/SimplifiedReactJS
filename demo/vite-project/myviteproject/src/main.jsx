@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.jsx";
+import App from "./App";
 
 ReactDOM.createRoot(document.getElementById("root")).render(<App />);
 
@@ -11,3 +11,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(<App />);
 //For CounterClass
 //import CounterClass from "./CounterClass";
 // ReactDOM.createRoot(document.getElementById("root")).render(<CounterClass />);
+//For Input
+// import Input from "./Input";
+// ReactDOM.createRoot(document.getElementById("root")).render(<Input />);
