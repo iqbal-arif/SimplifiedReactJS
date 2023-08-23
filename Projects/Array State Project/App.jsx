@@ -5,7 +5,9 @@ import { useState } from "react";
 const INITIAL_VALUE = ["A", "B", "C"];
 function App() {
   /*1. Create state that stores an array with the initial value of ["A", "B", "C"]*/
+  /**USESTATE */
   const [array, setArray] = useState(INITIAL_VALUE);
+  const [value, setValue] = useState("");
   /*2.  Add the ability to remove the first element from the array
     Changing new Value for the state but not chainging the Array value*/
   function removeFirstElement() {
@@ -46,6 +48,12 @@ function App() {
   }
   /**BONUS**/
   /*7. Add the ability to Update all "A" Element in the array to H */
+  function updateAtoH() {
+    setArray((currentArray) => {
+      return currentArray.map((letter) => (letter === "A" ? "H" : letter));
+    });
+  }
+  /*8. Add an Input that is connected to state and a button that will add the input value to the start of the array */
   function updateAtoH() {
     setArray((currentArray) => {
       return currentArray.map((letter) => (letter === "A" ? "H" : letter));
