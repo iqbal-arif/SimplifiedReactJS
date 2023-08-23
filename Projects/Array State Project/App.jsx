@@ -60,10 +60,11 @@ function App() {
       <br />
       <br />
       {/* Clear an Array*/}
-      <button onClick={() => clearArray()}>Clear an Array</button>
+      <button onClick={clearArray}>Clear an Array</button>
       <br />
       <br />
-      {array.join(",")}
+
+      {array ? array.join(",") : null}
     </>
   );
 }
