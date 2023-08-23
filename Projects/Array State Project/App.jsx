@@ -93,11 +93,12 @@ function App() {
       <input
         type="text"
         value={value}
-        onChange={(e) => setValue(e.target.valueAsNumber)}
+        onChange={(e) => setValue(e.target.value)}
       />
       ;
       <br />
       <br />
+      <button onClick={updateAtoH}>Add Value to Array</button>
       {array ? array.join(",") : null}
       {/* {array.join(",")} */}
     </>
