@@ -1,3 +1,4 @@
+// import { element } from "prop-types";
 import { useState } from "react";
 /***Initial Array Value */
 
@@ -45,8 +46,10 @@ function App() {
   }
   /**BONUS**/
   /*7. Add the ability to Update all "A" Element in the array to H */
-  function resetArray() {
-    setArray(INITIAL_VALUE);
+  function updateAtoH() {
+    setArray((currentArray) => {
+      return currentArray.map((letter) => (letter === "A" ? "H" : letter));
+    });
   }
   return (
     <>
@@ -76,6 +79,11 @@ function App() {
       <br />
       {/* Reset an Array*/}
       <button onClick={resetArray}>Reset an Array</button>
+      <br />
+      <br />
+      {/* BONUS */}
+      {/* Update A to H*/}
+      <button onClick={updateAtoH}>Upddate A to H</button>
       <br />
       <br />
       {array ? array.join(",") : null}
