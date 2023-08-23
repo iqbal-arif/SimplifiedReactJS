@@ -53,8 +53,10 @@ function App() {
       return currentArray.map((letter) => (letter === "A" ? "H" : letter));
     });
   }
-  /*8. Add an Input that is connected to state and a button that will add the input value to the start of the array */
-
+  /*8. Add an Input that is connected to state and a button that will add the input value to the start of the array. SEE BELOW in Rendering element */
+  /*
+  9. Add the ability to add a new element at any index in the array.
+  */
   return (
     <>
       {/* Remove First Element */}
@@ -99,7 +101,7 @@ function App() {
       <br />
       <br />
       <button onClick={() => addAnElementToStart(value)}>
-        Add Value to Array
+        Add Value to Start of an Array
       </button>
       {array ? array.join(",") : null}
       {/* {array.join(",")} */}
