@@ -73,8 +73,8 @@ function App() {
       <button onClick={resetArray}>Reset an Array</button>
       <br />
       <br />
-      {/* {array ? array.join(",") : null} */}
-      {array.join(",")}
+      {array ? array.join(",") : null}
+      {/* {array.join(",")} */}
     </>
   );
 }
