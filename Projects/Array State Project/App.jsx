@@ -31,6 +31,12 @@ function App() {
       return [...currentArray, letter];
     });
   }
+  /*6. Add the ability to clear an Arrray */
+  function addAnElementToEnd(letter) {
+    setArray((currentArray) => {
+      return [...currentArray, letter];
+    });
+  }
   return (
     <>
       {/* Remove First Element */}
@@ -47,10 +53,14 @@ function App() {
       </button>
       <br />
       <br />
-      {/* Add a New Element to Array */}
+      {/* Add a New Element to Array  End*/}
       <button onClick={() => addAnElementToEnd("End")}>
         Add An Element to End
       </button>
+      <br />
+      <br />
+      {/* Clear an Array*/}
+      <button onClick={() => clearArray()}>Clear an Array</button>
       <br />
       <br />
       {array.join(",")}
