@@ -27,6 +27,10 @@ function App() {
       <button onClick={() => removeSpecificLetter("B")}>Remove all B's</button>
       <br />
       <br />
+      {/* Add a New Element to Array */}
+      <button onClick={() => addAnElement("B")}>Add An Element</button>
+      <br />
+      <br />
       {array.join(",")}
     </>
   );
