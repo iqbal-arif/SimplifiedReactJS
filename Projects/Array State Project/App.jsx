@@ -17,6 +17,11 @@ function App() {
     });
   }
   /*4. Add the ability to add a new element to the start of the array */
+  function addAnElement(letter) {
+    setArray((currentArray) => {
+      return currentArray.filter((item) => item !== letter);
+    });
+  }
   return (
     <>
       {/* Remove First Element */}
