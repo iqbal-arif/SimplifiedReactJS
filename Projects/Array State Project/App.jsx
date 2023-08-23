@@ -90,7 +90,15 @@ function App() {
       <button onClick={updateAtoH}>Upddate A to H</button>
       <br />
       <br />
-      <input type="text" value={value} />;{array ? array.join(",") : null}
+      <input
+        type="text"
+        value={value}
+        onChange={(e) => setValue(e.target.valueAsNumber)}
+      />
+      ;
+      <br />
+      <br />
+      {array ? array.join(",") : null}
       {/* {array.join(",")} */}
     </>
   );
