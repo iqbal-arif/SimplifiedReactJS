@@ -98,7 +98,7 @@ function App() {
       ;
       <br />
       <br />
-      <button onClick={updateAtoH}>Add Value to Array</button>
+      <button onClick={addAnElementToStart}>Add Value to Array</button>
       {array ? array.join(",") : null}
       {/* {array.join(",")} */}
     </>
