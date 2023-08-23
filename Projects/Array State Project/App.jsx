@@ -54,11 +54,7 @@ function App() {
     });
   }
   /*8. Add an Input that is connected to state and a button that will add the input value to the start of the array */
-  function updateAtoH() {
-    setArray((currentArray) => {
-      return currentArray.map((letter) => (letter === "A" ? "H" : letter));
-    });
-  }
+  <input type="text" value={value} />;
   return (
     <>
       {/* Remove First Element */}
