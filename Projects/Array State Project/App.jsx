@@ -57,11 +57,13 @@ function App() {
   9. Add the ability to add a new element at any index in the array.
   */
   function addLetterAtAnyIndex(letter, index) {
-    return [
-      ...currentArray.slice(0, index),
-      letter,
-      ...currentArray.slice(index),
-    ];
+    setArray((currentArray) => {
+      return [
+        ...currentArray.slice(0, index),
+        letter,
+        ...currentArray.slice(index),
+      ];
+    });
   }
   return (
     <>
