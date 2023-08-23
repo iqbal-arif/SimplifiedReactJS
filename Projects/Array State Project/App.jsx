@@ -54,7 +54,7 @@ function App() {
     });
   }
   /*8. Add an Input that is connected to state and a button that will add the input value to the start of the array */
-  <input type="text" value={value} />;
+
   return (
     <>
       {/* Remove First Element */}
@@ -90,7 +90,7 @@ function App() {
       <button onClick={updateAtoH}>Upddate A to H</button>
       <br />
       <br />
-      {array ? array.join(",") : null}
+      <input type="text" value={value} />;{array ? array.join(",") : null}
       {/* {array.join(",")} */}
     </>
   );
