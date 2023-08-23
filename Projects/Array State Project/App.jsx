@@ -1,5 +1,3 @@
-// import { element } from "prop-types";
-import { func } from "prop-types";
 import { useState } from "react";
 /***Initial Array Value */
 
@@ -113,7 +111,11 @@ function App() {
       </button>
       <br />
       <br />
-      <button onClick={() => addLetterAtAnyIndex("C", 2)}></button>
+      <button onClick={() => addLetterAtAnyIndex("C", 2)}>
+        Add C to any Index
+      </button>
+      <br />
+      <br />
       {array ? array.join(",") : null}
       {/* {array.join(",")} */}
     </>
