@@ -33,11 +33,13 @@ function App() {
       <br />
       <br />
       {/* Add a New Element to Array  Start*/}
-      <button onClick={() => addAnElementToStart("B")}>Add An Element</button>
+      <button onClick={() => addAnElementToStart("Start")}>
+        Add An Element
+      </button>
       <br />
       <br />
       {/* Add a New Element to Array */}
-      <button onClick={() => addAnElementToStart("B")}>Add An Element</button>
+      <button onClick={() => addAnElementToEnd("End")}>Add An Element</button>
       <br />
       <br />
       {array.join(",")}
