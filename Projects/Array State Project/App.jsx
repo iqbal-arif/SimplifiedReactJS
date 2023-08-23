@@ -16,6 +16,7 @@ function App() {
       return currentArray.filter((item) => item !== letter);
     });
   }
+  /*4. Add the ability to add a new element to the start of the array */
   return (
     <>
       {/* Remove First Element */}
