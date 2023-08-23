@@ -11,9 +11,9 @@ function App() {
     });
   }
   /*3. Add the ability to remove a specific letter from the array */
-  function removeSpecificLetter() {
+  function removeSpecificLetter(letter) {
     setArray((currentArray) => {
-      return currentArray.slice(1);
+      return currentArray.filter((item) => item !== letter);
     });
   }
   return (
@@ -23,7 +23,7 @@ function App() {
       <br />
       <br />
       {/* Remove a Specific Letter */}
-      <button onClick={removeSpecificLetter}>Remove all A's</button>
+      <button onClick={removeSpecificLetter}>Remove all B's</button>
       <br />
       <br />
       {array.join(",")}
