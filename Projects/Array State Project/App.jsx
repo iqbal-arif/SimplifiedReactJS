@@ -32,9 +32,9 @@ function App() {
     });
   }
   /*6. Add the ability to clear an Arrray */
-  function addAnElementToEnd(letter) {
+  function clearArray() {
     setArray((currentArray) => {
-      return [...currentArray, letter];
+      setArray([]);
     });
   }
   return (
