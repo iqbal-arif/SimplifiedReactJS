@@ -11,6 +11,11 @@ function App() {
     });
   }
   /*3. Add the ability to remove a specific letter from the array */
+  function removeSpecificLetter() {
+    setArray((currentArray) => {
+      return currentArray.slice(1);
+    });
+  }
   return (
     <>
       {/* Remove First Element */}
