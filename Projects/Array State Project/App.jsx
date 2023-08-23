@@ -25,6 +25,12 @@ function App() {
       return [letter, ...currentArray];
     });
   }
+  /*5. Add the ability to add a new element to the end of the Arrray */
+  function addAnElementToStart(letter) {
+    setArray((currentArray) => {
+      return [...currentArray, letter];
+    });
+  }
   return (
     <>
       {/* Remove First Element */}
