@@ -23,7 +23,7 @@ function App() {
       <br />
       <br />
       {/* Remove a Specific Letter */}
-      <button onClick={removeSpecificLetter}>Remove all B's</button>
+      <button onClick={removeSpecificLetter("B")}>Remove all B's</button>
       <br />
       <br />
       {array.join(",")}
