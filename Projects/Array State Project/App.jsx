@@ -1,8 +1,10 @@
 import { useState } from "react";
+/***Initial Array Value */
 
+const INITIAL_VALUE = ["A", "B", "C"];
 function App() {
   /*1. Create state that stores an array with the initial value of ["A", "B", "C"]*/
-  const [array, setArray] = useState(["A", "B", "C"]);
+  const [array, setArray] = useState(INITIAL_VALUE);
   /*2.  Add the ability to remove the first element from the array
     Changing new Value for the state but not chainging the Array value*/
   function removeFirstElement() {
@@ -31,11 +33,15 @@ function App() {
       return [...currentArray, letter];
     });
   }
-  /*6. Add the ability to clear an Arrray */
+  /*6. Add the ability to Clear an Arrray */
   function clearArray() {
     setArray((currentArray) => {
       setArray([]);
     });
+  }
+  /*7. Add the ability to Reset an Arrray */
+  function resetArray() {
+    setArray(INITIAL_VALUE);
   }
   return (
     <>
@@ -63,8 +69,12 @@ function App() {
       <button onClick={clearArray}>Clear an Array</button>
       <br />
       <br />
-
-      {array ? array.join(",") : null}
+      {/* Reset an Array*/}
+      <button onClick={resetArray}>Reset an Array</button>
+      <br />
+      <br />
+      {/* {array ? array.join(",") : null} */}
+      {array.join(",")}
     </>
   );
 }
