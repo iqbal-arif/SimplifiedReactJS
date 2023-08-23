@@ -17,9 +17,12 @@ function App() {
     });
   }
   /*4. Add the ability to add a new element to the start of the array */
-  function addAnElement(letter) {
+  function addAnElementToStart(letter) {
     setArray((currentArray) => {
-      return currentArray.filter((item) => item !== letter);
+      /***WRONG WAY */
+      /*Modifying the initial array instead of creating a new array for React State. See below */
+      // currentArray.push(letter) //Pushes a letter to end of the intial Array
+      return [letter, ...currentArray];
     });
   }
   return (
