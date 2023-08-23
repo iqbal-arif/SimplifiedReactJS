@@ -43,6 +43,11 @@ function App() {
   function resetArray() {
     setArray(INITIAL_VALUE);
   }
+  /**BONUS**/
+  /*7. Add the ability to Update all "A" Element in the array to H */
+  function resetArray() {
+    setArray(INITIAL_VALUE);
+  }
   return (
     <>
       {/* Remove First Element */}
