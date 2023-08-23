@@ -98,7 +98,9 @@ function App() {
       ;
       <br />
       <br />
-      <button onClick={addAnElementToStart}>Add Value to Array</button>
+      <button onClick={() => addAnElementToStart(value)}>
+        Add Value to Array
+      </button>
       {array ? array.join(",") : null}
       {/* {array.join(",")} */}
     </>
