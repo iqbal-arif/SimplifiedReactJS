@@ -1,4 +1,5 @@
 // import { element } from "prop-types";
+import { func } from "prop-types";
 import { useState } from "react";
 /***Initial Array Value */
 
@@ -57,6 +58,13 @@ function App() {
   /*
   9. Add the ability to add a new element at any index in the array.
   */
+  function addLetterAtAnyIndex(letter, index) {
+    return [
+      ...currentArray.slice(0, index),
+      letter,
+      ...currentArray.slice(index),
+    ];
+  }
   return (
     <>
       {/* Remove First Element */}
@@ -103,6 +111,9 @@ function App() {
       <button onClick={() => addAnElementToStart(value)}>
         Add Value to Start of an Array
       </button>
+      <br />
+      <br />
+      <button onClick={() => addLetterAtAnyIndex("C", 2)}></button>
       {array ? array.join(",") : null}
       {/* {array.join(",")} */}
     </>
