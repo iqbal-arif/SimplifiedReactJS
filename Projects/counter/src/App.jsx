@@ -6,6 +6,10 @@ function App() {
   return (
     <>
       <h1>This is A Counter App</h1>
+      <br />
+      <button>-</button>
+      <span>0</span>
+      <button>+</button>
     </>
   );
 }
