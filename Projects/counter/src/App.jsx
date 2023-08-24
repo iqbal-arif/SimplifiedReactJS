@@ -3,6 +3,7 @@ import { useState } from "react";
 function App() {
   const [count, setCount] = useState(0);
   const [value, setValue] = useState("");
+  const []
 
   return (
     <>
@@ -13,6 +14,9 @@ function App() {
       <button>-</button>
       <span>0</span>
       <button>+</button>
+      <br />
+      <br />
+      <p>My name is {name} and I am 0 years old.</p>
     </>
   );
 }
