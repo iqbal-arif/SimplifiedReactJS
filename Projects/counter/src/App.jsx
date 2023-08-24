@@ -3,7 +3,11 @@ import { useState } from "react";
 function App() {
   // const [count, setCount] = useState(0);
 
-  return <></>;
+  return (
+    <>
+      <h1>This is A Counter App</h1>
+    </>
+  );
 }
 
 export default App;
