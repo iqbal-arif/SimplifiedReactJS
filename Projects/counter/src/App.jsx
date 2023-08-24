@@ -9,6 +9,7 @@ function App() {
       <h1>This is A Counter App</h1>
       <input type="text" value={value} />
       <br />
+      <br />
       <button>-</button>
       <span>0</span>
       <button>+</button>
