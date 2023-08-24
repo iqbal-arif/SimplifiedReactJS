@@ -13,20 +13,19 @@ function App() {
   return (
     <>
       <h1>This is A Counter App</h1>
-      <input
-        value={() => {
-          setValue();
-        }}
-        onChange={value}
-      />
+      <input value={value} onChange={(e) => setValue(e.target.value)} />
       <br />
       <br />
-      <button>-</button>
+      <button onClick={() => setCount((currentCount) => currentCount - 1)}>
+        -
+      </button>
       <span>0</span>
       <button>+</button>
       <br />
       <br />
-      <p>My name is {value} and I am 0 years old.</p>
+      <p>
+        My name is {value} and I am {count} years old.
+      </p>
     </>
   );
 }
