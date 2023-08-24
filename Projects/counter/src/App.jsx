@@ -26,7 +26,7 @@ function App() {
       <br />
       <br />
       <p>
-        My name is {value} and I am {count} years old.
+        My name is <h3>{value}</h3> and I am <h3>{count}</h3> years old.
       </p>
     </>
   );
