@@ -1,8 +1,14 @@
 // import { useState } from "react";
 import CounterComponent from "./CounterComponent";
+import CounterComponentClass from "./CounterComponentClass";
 
 function App() {
-  return <CounterComponent />;
+  return (
+    <>
+      <CounterComponent />
+      <CounterComponentClass />
+    </>
+  );
 }
 // function App() {
 //   const [count, setCount] = useState(0);
