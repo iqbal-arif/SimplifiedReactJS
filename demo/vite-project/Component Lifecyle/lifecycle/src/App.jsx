@@ -1,11 +1,8 @@
-import { useState } from "react";
 import Child from "./Child";
 function App() {
-  const [count, setCount] = useState(0);
-
+  console.log("Rendering Parent");
   return (
     <>
-      <h3>This is Component LifeCycle</h3>
       <Child />
     </>
   );
