@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Child from "./Child";
+import ShowHide from "./ShowHide";
 function App() {
   const [count, setCount] = useState(0);
   const [isShown, setIsShown] = useState(true);
@@ -11,10 +12,11 @@ function App() {
     <>
       <button
         style={{ display: "block", marginBottom: "1rem" }}
-        onClick={() => setCount((c) => c + 1)}
+        onClick={() => setIsShown((s) => !s)}
       >
-        {count}
+        Show / Hide
       </button>
+      {childComponent}
       <br />
       <br />
       <button
