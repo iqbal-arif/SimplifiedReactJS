@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Child from "./Child";
 import ShowHide from "./ShowHide";
+import UseEffectHook from "./UseEffectHook";
 function App() {
   const [count, setCount] = useState(0);
   const [isShown, setIsShown] = useState(true);
@@ -26,6 +27,7 @@ function App() {
         {count}
       </button>
       <Child />
+      <UseEffectHook />
     </>
   );
 }
