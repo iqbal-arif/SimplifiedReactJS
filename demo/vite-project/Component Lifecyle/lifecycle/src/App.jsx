@@ -4,6 +4,8 @@ function App() {
   const [count, setCount] = useState(0);
   const [isShown, setIsShown] = useState(true);
 
+  const childComponent = isShown ? <ShowHide /> : null;
+
   console.log("Rendering Parent");
   return (
     <>
