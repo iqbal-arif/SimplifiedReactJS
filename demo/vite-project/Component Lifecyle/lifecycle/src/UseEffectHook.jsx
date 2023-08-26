@@ -19,7 +19,7 @@ export default function UseEffectHook() {
   // Width of the browser
   useEffect(() => {
     window.addEventListener("resize", () => {
-      setWidth(width.innerWidth);
+      setWidth(window.innerWidth);
     });
   });
 
