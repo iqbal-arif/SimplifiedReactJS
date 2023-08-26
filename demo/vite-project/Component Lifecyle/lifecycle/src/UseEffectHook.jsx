@@ -19,7 +19,7 @@ export default function UseEffectHook() {
   // Width of the browser changes with resizing.
   useEffect(() => {
     window.addEventListener("resize", () => {
-      console.log(setWidth(window.innerWidth));
+      setWidth(window.innerWidth);
     });
   }, []);
 
@@ -36,7 +36,7 @@ export default function UseEffectHook() {
       <br />
       My name is {name}
       {/* Browser's Width */}
-      {width}
+      {setWidth}
     </>
   );
 }
