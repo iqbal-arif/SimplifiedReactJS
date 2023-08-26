@@ -5,8 +5,8 @@ export default function UseEffectHook() {
   const [age, setAge] = useState(0);
 
   useEffect(() => {
-    console.log("Name or Age changed", { name });
-  }, [name]);
+    console.log("Name or Age changed", { name, age });
+  }, [name, age]);
 
   return (
     <>
