@@ -11,7 +11,10 @@ export default function UseEffectHook() {
   useEffect(() => {
     console.log("Name or Age changed", { name, age });
   }, [name, age]);
-
+  //Changes doucment title when input is changed
+  useEffect(() => {
+    document.title = name;
+  }, [name]);
   return (
     <>
       <h3>This is UseEffect Hook Example</h3>
