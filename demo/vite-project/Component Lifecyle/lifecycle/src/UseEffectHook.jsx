@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 export default function UseEffectHook() {
   const [name, setName] = useState("");
   const [age, setAge] = useState(0);
+  const [width, setWidth] = useState(window.innerWidth);
   //Runs once when component is mounted
   useEffect(() => {
     console.log("Mounts");
@@ -15,6 +16,8 @@ export default function UseEffectHook() {
   useEffect(() => {
     document.title = name;
   }, [name]);
+  // Width of the browser
+
   return (
     <>
       <h3>This is UseEffect Hook Example</h3>
@@ -27,6 +30,8 @@ export default function UseEffectHook() {
       <input value={name} onChange={(e) => setName(e.target.value)} />
       <br />
       My name is {name}
+      {/* Browser's Width */}
+      {width}
     </>
   );
 }
