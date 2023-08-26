@@ -16,12 +16,12 @@ export default function UseEffectHook() {
   useEffect(() => {
     document.title = name;
   }, [name]);
-  // Width of the browser
+  // Width of the browser changes with resizing.
   useEffect(() => {
     window.addEventListener("resize", () => {
-      setWidth(window.innerWidth);
+      console.log(setWidth(window.innerWidth));
     });
-  });
+  }, []);
 
   return (
     <>
