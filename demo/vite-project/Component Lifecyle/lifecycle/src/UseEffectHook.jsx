@@ -17,6 +17,11 @@ export default function UseEffectHook() {
     document.title = name;
   }, [name]);
   // Width of the browser
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      setWidth(width.innerWidth);
+    });
+  });
 
   return (
     <>
