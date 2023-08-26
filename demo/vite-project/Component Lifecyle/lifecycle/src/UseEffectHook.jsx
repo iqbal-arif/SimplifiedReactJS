@@ -18,10 +18,22 @@ export default function UseEffectHook() {
   }, [name]);
   // Width of the browser changes with resizing.
   useEffect(() => {
-    window.addEventListener("resize", () => {
-      setWidth(window.innerWidth);
-    });
-  }, []);
+    const handler = () => {
+      console.log(name);
+    };
+    //For Resizing Window Event
+    // window.addEventListener("resize", () => {
+    //   const newWidth = setWidth(window.innerWidth);
+    //   console.log(newWidth);
+    // });
+    // Event invokes everytime when
+    document.addEventListener("click", handler);
+    console.log("Added Eveent");
+
+    return () => {
+      document.removeEventListener("click", handler);
+    };
+  }, [name]);
 
   return (
     <>
@@ -36,7 +48,7 @@ export default function UseEffectHook() {
       <br />
       My name is {name}
       {/* Browser's Width */}
-      {setWidth}
+      {width}
     </>
   );
 }
