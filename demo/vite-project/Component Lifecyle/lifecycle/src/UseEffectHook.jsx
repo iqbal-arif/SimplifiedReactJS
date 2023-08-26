@@ -3,7 +3,11 @@ import { useState, useEffect } from "react";
 export default function UseEffectHook() {
   const [name, setName] = useState("");
   const [age, setAge] = useState(0);
-
+  //Runs once when component is mounted
+  useEffect(() => {
+    console.log("Mounts");
+  }, []);
+  //Runs every time when name or age is changed
   useEffect(() => {
     console.log("Name or Age changed", { name, age });
   }, [name, age]);
