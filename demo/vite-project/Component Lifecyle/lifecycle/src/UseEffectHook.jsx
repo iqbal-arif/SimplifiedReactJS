@@ -28,10 +28,11 @@ export default function UseEffectHook() {
     // });
     // Event invokes everytime when
     document.addEventListener("click", handler);
-    console.log("Added Eveent");
+    console.log("Added Event");
 
     return () => {
       document.removeEventListener("click", handler);
+      console.log("Remove Event");
     };
   }, [name]);
 
