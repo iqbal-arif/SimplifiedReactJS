@@ -17,6 +17,12 @@ export default function UseEffectHook() {
     document.title = name;
   }, [name]);
   // Width of the browser changes with resizing.
+
+  //Note:
+  // 1. REMOVES EVENTLISTNER
+  // 2. RUNS INPUT VALUE CHANGE
+  // 3. ADDS EVENTLISTENER
+  // THIS cylce goes no on every change.
   useEffect(() => {
     const handler = () => {
       console.log(name);
