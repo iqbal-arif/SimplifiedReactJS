@@ -22,6 +22,7 @@ export default function UseEffectHook() {
   // 1. REMOVES EVENTLISTNER
   // 2. RUNS INPUT VALUE CHANGE
   // 3. ADDS EVENTLISTENER
+  // 4. WHEN THE COMPONENT IS COMPLETELY REMOVED. The RETURN statment will run one last time to make sure all the events are cleaned.
   // THIS cylce goes no on every change.
   useEffect(() => {
     const handler = () => {
