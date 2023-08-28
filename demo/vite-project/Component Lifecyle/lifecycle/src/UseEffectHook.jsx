@@ -4,6 +4,15 @@ export default function UseEffectHook() {
   const [name, setName] = useState("");
   const [age, setAge] = useState(0);
   const [width, setWidth] = useState(window.innerWidth);
+  /*
+  Using object as with properties, so everytime the name change we want useEffect to change as well.
+  ****Using object will create a new object per change. So it won't be a va
+  const person = {name}
+  useEffect(() => {
+    console.log(name);
+  }.[person]);
+
+  */
   //Runs once when component is mounted
   useEffect(() => {
     console.log("Mounts");
