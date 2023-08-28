@@ -6,7 +6,9 @@ export default function UseEffectHook() {
   const [width, setWidth] = useState(window.innerWidth);
   /*
   Using object as with properties, so everytime the name change we want useEffect to change as well.
-  ****Using object will create a new object per change. So it won't be a va
+  ****Using object will create a new object per change. Eventhough the value is the same but object is changing every time.
+  So, JavaScript is referencing to a new object with the same value.
+  To rectify this, just use [name] property instead of object itself/
   const person = {name}
   useEffect(() => {
     console.log(name);
