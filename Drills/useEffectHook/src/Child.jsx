@@ -16,7 +16,18 @@ export function Child() {
   useEffect(() => {
     //2. `console.log` the text **Hi** when the component mounts
     console.log("Hi");
-  });
+  }, []);
+
+  //3. `console.log` the text **My name is {name} and I am {age} years old** whenever the `name` or `age` changes
+  useEffect(() => {
+    //Runs every time when name or age is changed
+    console.log(`My name is ${name} and I am ${age} years old`);
+  }, [name, age]);
+
+  //4. Update the `document.title` to be equal to `name` whenever the `name` changes
+  useEffect(() => {
+    document.title = name;
+  }, [name]);
   useEffect(() => {
     const handler = () => {
       setTimeout(() => {
@@ -32,10 +43,14 @@ export function Child() {
     //2. My Answer
     //Runs once when component is mounted
     console.log("Hi");*/
+    /*
+    //3. My Answer
     //Runs every time when name or age is changed
-    console.log(`My name is ${name} and I am ${age} years old`);
+    console.log(`My name is ${name} and I am ${age} years old`);*/
+    /*
+    //4. My Answer
     //Changes doucment title when input is changed
-    document.title = name;
+    document.title = name;*/
     //Use of return function will unmount the component
     return () => {
       document.removeEventListener("keydown", handler);
