@@ -50,7 +50,7 @@ export default function UseEffectHook() {
 
     return () => {
       document.removeEventListener("click", handler);
-      console.log("Remove Event");
+      console.log("Bye");
     };
   }, [name]);
 
