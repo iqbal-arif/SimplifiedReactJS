@@ -41,6 +41,10 @@ export function Child() {
       <br />
       <br />
       My name is {name} and I am {age} years old.
+      <br />
+      <br />
+      <p>Set Timeout</p>
+      My name is {name}
     </div>
   );
 }
