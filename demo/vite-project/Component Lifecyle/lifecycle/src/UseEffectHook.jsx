@@ -63,12 +63,7 @@ export default function UseEffectHook() {
       >
         {age}
       </button>
-      <input
-        value={name}
-        onChange={setTimeout((e) => {
-          setName(e.target.value);
-        }, 5000)}
-      />
+      <input value={name} onChange={(e) => setName(e.target.value)} />
       <br />
       My name is {name}
       {/* Browser's Width */}
