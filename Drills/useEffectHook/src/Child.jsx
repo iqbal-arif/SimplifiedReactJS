@@ -5,9 +5,6 @@ export function Child() {
   const [name, setName] = useState("");
   console.log("Render");
 
-  // useEffect(() => {
-  // }, []);
-
   useEffect(() => {
     //Runs once when component is mounted
     console.log("Hi");
@@ -17,6 +14,9 @@ export function Child() {
     document.title = name;
   }, [name, age]);
 
+  useEffect(() => {
+    console.log("Bye");
+  }, []);
   return (
     <div>
       <input
