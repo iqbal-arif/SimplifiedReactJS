@@ -67,7 +67,7 @@ export default function UseEffectHook() {
         value={name}
         onChange={setTimeout((e) => {
           setName(e.target.value);
-        }, 1000)}
+        }, 5000)}
       />
       <br />
       My name is {name}
