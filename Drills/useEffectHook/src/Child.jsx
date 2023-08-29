@@ -5,15 +5,16 @@ export function Child() {
   const [name, setName] = useState("");
   console.log("Render");
 
-  //Runs once when component is mounted
-  useEffect(() => {
-    console.log("Hi");
-  }, []);
+  // useEffect(() => {
+  // }, []);
 
-  //Runs every time when name or age is changed
   useEffect(() => {
+    //Runs once when component is mounted
+    console.log("Hi");
+    //Runs every time when name or age is changed
     console.log(`My name is ${name} and I am ${age} years old`);
-    document.title = { name };
+    //Changes doucment title when input is changed
+    document.title = name;
   }, [name, age]);
 
   return (
