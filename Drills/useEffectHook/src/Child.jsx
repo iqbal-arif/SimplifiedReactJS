@@ -12,11 +12,17 @@ export function Child() {
     console.log(`My name is ${name} and I am ${age} years old`);
     //Changes doucment title when input is changed
     document.title = name;
+    //Use of return function will unmount the component
+    return () => {
+      // document.removeEventListener("click", handler);
+      console.log("Remove Event");
+    };
   }, [name, age]);
 
-  useEffect(() => {
-    console.log("Bye");
-  }, []);
+  // useEffect(() => {
+  //   console.log("Bye");
+  // }, []);
+
   return (
     <div>
       <input
