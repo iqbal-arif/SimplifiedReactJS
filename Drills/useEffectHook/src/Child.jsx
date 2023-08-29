@@ -14,7 +14,6 @@ export function Child() {
 
     // Event invokes everytime when
     document.addEventListener("keydown", handler);
-    console.log("Key has been Pressed");
 
     //Runs once when component is mounted
     console.log("Hi");
