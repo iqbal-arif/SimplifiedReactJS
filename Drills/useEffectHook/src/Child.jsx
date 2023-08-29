@@ -16,6 +16,11 @@ export function Child() {
   useEffect(() => {
     //2. `console.log` the text **Hi** when the component mounts
     console.log("Hi");
+    //Bonus: Render "Bye" on unmount
+    // Should be done on empty array, becuase it runs only once and at unmounts it should run at that time.
+    return () => {
+      console.log("Bye");
+    };
   }, []);
 
   //3. `console.log` the text **My name is {name} and I am {age} years old** whenever the `name` or `age` changes
@@ -28,6 +33,7 @@ export function Child() {
   useEffect(() => {
     document.title = name;
   }, [name]);
+
   useEffect(() => {
     const handler = () => {
       setTimeout(() => {
@@ -54,7 +60,9 @@ export function Child() {
     //Use of return function will unmount the component
     return () => {
       document.removeEventListener("keydown", handler);
-      console.log("Bye");
+      /*
+      //5. Render "Bye" on unmount. this is done wrongly
+      console.log("Bye");*/
     };
   }, [name, age]);
 
