@@ -6,6 +6,16 @@ export function Child() {
   console.log("Render");
 
   useEffect(() => {
+    const handler = () => {
+      setTimeout(() => {
+        console.log(name);
+      }, 1000);
+    };
+
+    // Event invokes everytime when
+    document.addEventListener("keydown", handler);
+    console.log("Key has been Pressed");
+
     //Runs once when component is mounted
     console.log("Hi");
     //Runs every time when name or age is changed
@@ -14,7 +24,7 @@ export function Child() {
     document.title = name;
     //Use of return function will unmount the component
     return () => {
-      // document.removeEventListener("click", handler);
+      document.removeEventListener("keydown", handler);
       console.log("Remove Event");
     };
   }, [name, age]);
@@ -29,9 +39,6 @@ export function Child() {
         type="text"
         value={name}
         onChange={(e) => setName(e.target.value)}
-        // onChange={setTimeout((e) => {
-        //   setName(e.target.value);
-        // }, 5000)}
       />
       <br />
       <br />
