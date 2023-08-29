@@ -34,10 +34,12 @@ export function Child() {
     document.title = name;
     //Teacher Answer
     //Bounus: Settimeout
+    const timeOut = setTimeout(() => {
+      console.log(`My name is ${name}`);
+    }, 1000);
+    //The followin return =()functions allows a log delay and once the key is stopped it displays that portion of input. Otherwise user typing shows on the screen, but does not log to console until next delay
     return () => {
-      setTimeout(() => {
-        console.log(name);
-      }, 1000);
+      clearTimeout(timeOut);
     };
   }, [name]);
 
