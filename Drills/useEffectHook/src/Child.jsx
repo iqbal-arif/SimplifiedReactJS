@@ -8,12 +8,14 @@ export function Child() {
   useEffect(() => {
     const handler = () => {
       setTimeout(() => {
+        name;
         console.log(name);
       }, 1000);
     };
 
     // Event invokes everytime when
     document.addEventListener("keydown", handler);
+    // console.log("Key has been Pressed");
 
     //Runs once when component is mounted
     console.log("Hi");
@@ -24,7 +26,7 @@ export function Child() {
     //Use of return function will unmount the component
     return () => {
       document.removeEventListener("keydown", handler);
-      console.log("Remove Event");
+      console.log("Bye");
     };
   }, [name, age]);
 
@@ -37,13 +39,7 @@ export function Child() {
       <input
         type="text"
         value={name}
-        onChange={(e) =>
-          setName(
-            setTimeout(() => {
-              e.target.value;
-            }, 2000)
-          )
-        }
+        onChange={(e) => setName(e.target.value)}
       />
       <br />
       <br />
