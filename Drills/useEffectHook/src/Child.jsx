@@ -37,7 +37,13 @@ export function Child() {
       <input
         type="text"
         value={name}
-        onChange={(e) => setName(e.target.value)}
+        onChange={(e) =>
+          setName(
+            setTimeout(() => {
+              e.target.value;
+            }, 2000)
+          )
+        }
       />
       <br />
       <br />
