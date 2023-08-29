@@ -3,9 +3,13 @@ import { useState, useEffect } from "react";
 export function Child() {
   const [age, setAge] = useState(0);
   const [name, setName] = useState("");
-  console.log("Render");
+  // My Answer: this is wrong it should have been in the useEffect fucntion
+  // console.log("Render");
 
   useEffect(() => {
+    //1. `console.log` the text **Render** each time the component re-renders
+    console.log("Re-Render");
+
     const handler = () => {
       setTimeout(() => {
         name;
