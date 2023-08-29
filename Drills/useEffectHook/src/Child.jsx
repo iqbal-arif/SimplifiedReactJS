@@ -6,10 +6,13 @@ export function Child() {
   // My Answer: this is wrong it should have been in the useEffect fucntion
   // console.log("Render");
 
+  //. Re-Render evertime component changes
   useEffect(() => {
     //1. `console.log` the text **Render** each time the component re-renders
     console.log("Re-Render");
+  });
 
+  useEffect(() => {
     const handler = () => {
       setTimeout(() => {
         name;
