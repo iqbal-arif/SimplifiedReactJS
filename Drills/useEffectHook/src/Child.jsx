@@ -13,7 +13,9 @@ export function Child() {
   //Runs every time when name or age is changed
   useEffect(() => {
     console.log(`My name is ${name} and I am ${age} years old`);
+    document.title = { name };
   }, [name, age]);
+
   return (
     <div>
       <input
