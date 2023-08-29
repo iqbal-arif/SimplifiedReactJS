@@ -5,13 +5,18 @@ export function Child() {
   const [name, setName] = useState("");
   // My Answer: this is wrong it should have been in the useEffect fucntion
   // console.log("Render");
-
-  //. Re-Render evertime component changes
+  //Instructor Answer
+  //1. Re-Render evertime component changes
   useEffect(() => {
     //1. `console.log` the text **Render** each time the component re-renders
     console.log("Re-Render");
   });
-
+  //Instructor Answer
+  //2. Render **Hi** when the component mounts
+  useEffect(() => {
+    //2. `console.log` the text **Hi** when the component mounts
+    console.log("Hi");
+  });
   useEffect(() => {
     const handler = () => {
       setTimeout(() => {
@@ -23,9 +28,10 @@ export function Child() {
     // Event invokes everytime when
     document.addEventListener("keydown", handler);
     // console.log("Key has been Pressed");
-
+    /*
+    //2. My Answer
     //Runs once when component is mounted
-    console.log("Hi");
+    console.log("Hi");*/
     //Runs every time when name or age is changed
     console.log(`My name is ${name} and I am ${age} years old`);
     //Changes doucment title when input is changed
