@@ -32,39 +32,56 @@ export function Child() {
   //4. Update the `document.title` to be equal to `name` whenever the `name` changes
   useEffect(() => {
     document.title = name;
+    //Teacher Answer
+    //Bounus: Settimeout
+    return () => {
+      setTimeout(() => {
+        console.log(name);
+      }, 1000);
+    };
   }, [name]);
 
-  useEffect(() => {
+  /* useEffect(() => {
+
+    //My Answer
+    //Bonus: Set TimeOut Printing delay on console done wrongly
+    // I ADDED EVENT Handler which is not required
+
     const handler = () => {
       setTimeout(() => {
         name;
         console.log(name);
       }, 1000);
     };
-
-    // Event invokes everytime when
-    document.addEventListener("keydown", handler);
-    // console.log("Key has been Pressed");
     /*
+    //My Answer
+    // Bonus: Settimeout: Event invokes everytime when
+    document.addEventListener("keydown", handler);*/
+  // console.log("Key has been Pressed");
+  /*
     //2. My Answer
     //Runs once when component is mounted
     console.log("Hi");*/
-    /*
+  /*
     //3. My Answer
     //Runs every time when name or age is changed
     console.log(`My name is ${name} and I am ${age} years old`);*/
-    /*
+  /*
     //4. My Answer
     //Changes doucment title when input is changed
     document.title = name;*/
-    //Use of return function will unmount the component
-    return () => {
-      document.removeEventListener("keydown", handler);
-      /*
+
+  // My Answer done wrongly
+  //Use of return function will unmount the component
+  /*return () => {
+      // My Answer
+      //Bonus: Set Timeout done wrongly
+      document.removeEventListener("keydown", handler);*/
+  /*
       //5. Render "Bye" on unmount. this is done wrongly
       console.log("Bye");*/
-    };
-  }, [name, age]);
+  //   };
+  // }, [name, age]);
 
   // useEffect(() => {
   //   console.log("Bye");
@@ -85,10 +102,11 @@ export function Child() {
       <br />
       <br />
       My name is {name} and I am {age} years old.
-      <br />
+      {/* My Answer Not Needed */}
+      {/* <br />
       <br />
       <p>Set Timeout</p>
-      My name is {name}
+      My name is {name} */}
     </div>
   );
 }
