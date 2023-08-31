@@ -1,9 +1,12 @@
-import { useState } from "react";
+import { Child } from "./Child";
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  return <p className="class component lifecycle">Class Component Lifecycle</p>;
+  return (
+    <>
+      <p className="class component lifecycle">Class Component Lifecycle</p>
+      <Child />
+    </>
+  );
 }
 
 export default App;
