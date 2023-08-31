@@ -17,6 +17,15 @@ export class Child extends React.Component {
           value={this.state.name}
           onChange={(e) => this.setState({ name: e.target.value })}
         ></input>
+        <br />
+        <br />
+        <button
+          onClick={() => {
+            return {
+              age: currentStage.age - 1,
+            };
+          }}
+        ></button>
       </div>
     );
   }
