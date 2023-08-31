@@ -13,7 +13,10 @@ export class Child extends React.Component {
   render() {
     return (
       <div>
-        <input></input>
+        <input
+          value={this.state.name}
+          onChange={(e) => this.setState({ name: e.target.value })}
+        ></input>
       </div>
     );
   }
