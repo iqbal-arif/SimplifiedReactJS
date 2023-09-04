@@ -12,9 +12,9 @@ function App() {
   useEffect(() => {
     //Setting loading state
     setLoading(true);
-
+    setError(undefined);
     {
-      fetch("https://jsonplaceholder.typicode.com/users")
+      fetch("https://jsonplaceholder.typicode.com/userswer")
         .then((res) => {
           res.status === 200 ? res.json() : Promise.reject(res);
         })
