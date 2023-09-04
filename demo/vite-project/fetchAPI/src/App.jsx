@@ -16,6 +16,7 @@ function App() {
   return (
     <>
       <h2>User API Fetching</h2>
+      {JSON.stringify(users)}
     </>
   );
 }
