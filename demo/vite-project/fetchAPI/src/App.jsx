@@ -8,10 +8,14 @@ function App() {
   //Using useEffect so the fetch runs once instead of multiple fetch
   //without useEffet it fetches multiple times.
   useEffect(() => {
+    //Setting loading state
     setLoading(true);
+
     {
       fetch("https://jsonplaceholder.typicode.com/users")
-        .then((response) => response.json())
+        .then((res) => {
+          res.status === 200 ? res.json() : Promise.reject(res);
+        })
         .then((json) => setUsers(json))
         .finally(() => {
           setLoading(false);
