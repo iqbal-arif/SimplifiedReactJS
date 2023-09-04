@@ -5,6 +5,8 @@ function App() {
   const [users, setUsers] = useState("");
   //Defining Loading state when data is being fetched
   const [loading, setLoading] = useState(true);
+  //Error useState
+  const [error, setError] = useState();
   //Using useEffect so the fetch runs once instead of multiple fetch
   //without useEffet it fetches multiple times.
   useEffect(() => {
@@ -17,6 +19,7 @@ function App() {
           res.status === 200 ? res.json() : Promise.reject(res);
         })
         .then((json) => setUsers(json))
+        .catch((e) => setError(e))
         .finally(() => {
           setLoading(false);
         });
