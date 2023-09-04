@@ -34,10 +34,10 @@ export class Child extends React.Component {
     }
     //Bonus
     //2. Create a timeout that `console.log`s the text **My name is {name}** only after there has been a 1 second delay since the last time the name was changed
+    if (this.nameTimeOut != null) clearTimeout(this.nameTimeOut);
     this.nameTimeOut = setTimeout(() => {
       console.log(`My name is ${this.state.name}`);
     }, 1000);
-    if (this.nameTimeOut != null) clearTimeout(this.nameTimeOut);
   }
 
   componentWillUnmount() {
