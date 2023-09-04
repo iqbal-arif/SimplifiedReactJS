@@ -9,6 +9,11 @@ export class Child extends React.Component {
     };
   }
 
+  componentDidMount() {
+    //2. `console.log` the text **Hi** when the component mounts
+    console.log("Hi");
+  }
+
   componentDidUpdate() {
     //1. `console.log` the text **Render** each time the component re-renders
     console.log("Renders");
