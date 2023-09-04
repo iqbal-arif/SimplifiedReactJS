@@ -30,6 +30,8 @@ function App() {
   let dataFetch;
   loading
     ? (dataFetch = <h3>Fetching Data.....</h3>)
+    : error != null
+    ? (dataFetch = <h3>Error!!!</h3>)
     : (dataFetch = JSON.stringify(users));
   return (
     <>
