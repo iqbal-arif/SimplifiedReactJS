@@ -21,6 +21,15 @@ export class Child extends React.Component {
     console.log(
       `My name is ${this.state.name} and I am ${this.state.age} years old.`
     );
+    //4. Update the `document.title` to be equal to `name` whenever the `name` changes
+    document.title = this.state.name;
+  }
+
+  componentWillUnmount() {
+    //Bonus
+    //1. `console.log` the text **Bye** when the component unmounts
+
+    console.log("Bye");
   }
   render() {
     return (
