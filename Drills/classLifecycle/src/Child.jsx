@@ -23,6 +23,15 @@ export class Child extends React.Component {
     );
     //4. Update the `document.title` to be equal to `name` whenever the `name` changes
     document.title = this.state.name;
+    //Bonus
+    //2. Create a timeout that `console.log`s the text **My name is {name}** only after there has been a 1 second delay since the last time the name was changed
+    const timeOut = setTimeout(() => {
+      console.log(`My name is ${this.state.name}`);
+    }, 1000);
+    //The followin return =()functions allows a log delay and once the key is stopped it displays that portion of input. Otherwise user typing shows on the screen, but does not log to console until next delay
+    return () => {
+      clearTimeout(timeOut);
+    };
   }
 
   componentWillUnmount() {
