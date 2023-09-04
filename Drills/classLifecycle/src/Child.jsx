@@ -10,17 +10,24 @@ export class Child extends React.Component {
   }
 
   componentDidMount() {
+    //1. `console.log` the text **Render** each time the component re-renders. Doing her to make sure it pops up on Mount.
+    console.log("Renders");
     //2. `console.log` the text **Hi** when the component mounts
     console.log("Hi");
   }
 
-  componentDidUpdate() {
+  componentDidUpdate(preProps, prevState) {
     //1. `console.log` the text **Render** each time the component re-renders
     console.log("Renders");
     //3. `console.log` the text **My name is {name} and I am {age} years old** whenever the `name` or `age` changes
-    console.log(
-      `My name is ${this.state.name} and I am ${this.state.age} years old.`
-    );
+    if (
+      prevState.name !== this.state.name ||
+      prevState.age !== this.state.age
+    ) {
+      console.log(
+        `My name is ${this.state.name} and I am ${this.state.age} years old.`
+      );
+    }
     //4. Update the `document.title` to be equal to `name` whenever the `name` changes
     document.title = this.state.name;
     //Bonus
