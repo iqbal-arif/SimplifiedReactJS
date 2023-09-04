@@ -8,6 +8,10 @@ export class Child extends React.Component {
       name: "",
       age: 0,
     };
+
+    this.handleClick = () => {
+      console.log(this.state.name);
+    };
   }
 
   //Mounting a Class Component State
@@ -18,6 +22,15 @@ export class Child extends React.Component {
   //UnMounting a Class Component State
   componentWillUnmount() {
     console.log("Component Un-mounted");
+    document.removeEventListener("click", this.handleClick);
+  }
+
+  //Updating a Class Component
+  componentDidUpdate(prevProps, preState) {
+    if (preState.name !== this.state.name) {
+      document.removeEventListener("click", this.handleClick);
+      document.addEventListener("click", this.handleClick);
+    }
   }
   render() {
     return (
