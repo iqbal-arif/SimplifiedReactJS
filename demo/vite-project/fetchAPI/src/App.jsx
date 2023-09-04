@@ -18,11 +18,16 @@ function App() {
         });
     }
   }, []);
-  console.log(users);
+  // console.log(users);
+  // Displaying Loading whiling fetching Data from API
+  let dataFetch;
+  loading
+    ? (dataFetch = <h3>Fetching Data.....</h3>)
+    : (dataFetch = JSON.stringify(users));
   return (
     <>
       <h2>User API Fetching</h2>
-      {JSON.stringify(users)}
+      {dataFetch}
     </>
   );
 }
