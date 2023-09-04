@@ -43,8 +43,9 @@ export class Child extends React.Component {
   componentWillUnmount() {
     //Bonus
     //1. `console.log` the text **Bye** when the component unmounts
-
     console.log("Bye");
+    // Re-run the clearTimeout to assure it is clear at unmount.
+    if (this.nameTimeOut != null) clearTimeout(this.nameTimeOut);
   }
   render() {
     return (
