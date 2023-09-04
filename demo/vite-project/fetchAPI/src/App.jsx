@@ -20,12 +20,16 @@ function App() {
         signal: controller.signal,
       })
         .then((res) => {
-          res.status === 200 ? res.json() : Promise.reject(res);
+          // res.status === 200 ? res.json() : Promise.reject(res);
+          if (res.status === 200) {
+            return res.json();
+          } else {
+            return Promise.reject(res);
+          }
         })
         .then((json) => setUsers(json))
         .catch((e) => {
-          if (e?.name === "AbortError") return;
-          setError(e);
+          if (e?.name === "AbortError") return setError(e);
         })
         .finally(() => {
           setLoading(false);
@@ -39,11 +43,19 @@ function App() {
   // console.log(users);
   // Displaying Loading whiling fetching Data from API
   let dataFetch;
-  loading
-    ? (dataFetch = <h3>Fetching Data.....</h3>)
-    : error != null
-    ? (dataFetch = <h3>Error!!!</h3>)
-    : (dataFetch = JSON.stringify(users));
+  // loading
+  //   ? (dataFetch = <h3>Fetching Data.....</h3>)
+  //   : error != null
+  //   ? (dataFetch = <h3>Error!!!</h3>)
+  //   : (dataFetch = JSON.stringify(users));
+  if (loading) {
+    dataFetch = <h3>Fetching Data.....</h3>;
+  } else if (error != null) {
+    dataFetch = <h3>Error!!!</h3>;
+  } else {
+    dataFetch = JSON.stringify(users);
+  }
+
   return (
     <>
       <h2>User API Fetching</h2>
