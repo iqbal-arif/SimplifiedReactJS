@@ -20,12 +20,31 @@ export class Child extends React.Component {
         <br />
         <br />
         <button
-          onClick={() => {
-            return {
-              age: currentStage.age - 1,
-            };
-          }}
-        ></button>
+          onClick={() =>
+            this.setState((currentState) => {
+              return {
+                age: currentState.age + 1,
+              };
+            })
+          }
+        >
+          +
+        </button>
+        <span>{this.state.age}</span>
+        <button
+          onClick={() =>
+            this.setState((currentState) => {
+              return {
+                age: currentState.age - 1,
+              };
+            })
+          }
+        >
+          -
+        </button>
+        <p>
+          My name is {this.state.name} and I am {this.state.age} years old.
+        </p>
       </div>
     );
   }
