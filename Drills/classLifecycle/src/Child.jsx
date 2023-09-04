@@ -17,6 +17,10 @@ export class Child extends React.Component {
   componentDidUpdate() {
     //1. `console.log` the text **Render** each time the component re-renders
     console.log("Renders");
+    //3. `console.log` the text **My name is {name} and I am {age} years old** whenever the `name` or `age` changes
+    console.log(
+      `My name is ${this.state.name} and I am ${this.state.age} years old.`
+    );
   }
   render() {
     return (
