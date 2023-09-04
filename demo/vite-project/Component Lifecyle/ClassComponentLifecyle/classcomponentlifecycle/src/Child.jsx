@@ -10,6 +10,15 @@ export class Child extends React.Component {
     };
   }
 
+  //Mounting a Class Component State
+  componentDidMount() {
+    console.log("Mount");
+  }
+
+  //UnMounting a Class Component State
+  componentWillUnmount() {
+    console.log("Component Un-mounted");
+  }
   render() {
     return (
       <div>
