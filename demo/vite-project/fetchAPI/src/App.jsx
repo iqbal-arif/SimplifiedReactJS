@@ -13,16 +13,27 @@ function App() {
     //Setting loading state
     setLoading(true);
     setError(undefined);
+    //Setting signal, a part of controller to stop double fetching
+    const controller = new AbortController();
     {
-      fetch("https://jsonplaceholder.typicode.com/userswer")
+      fetch("https://jsonplaceholder.typicode.com/users", {
+        signal: controller.signal,
+      })
         .then((res) => {
           res.status === 200 ? res.json() : Promise.reject(res);
         })
         .then((json) => setUsers(json))
-        .catch((e) => setError(e))
+        .catch((e) => {
+          if (e?.name === "AbortError") return;
+          setError(e);
+        })
         .finally(() => {
           setLoading(false);
         });
+      //Cleanup
+      return () => {
+        controller.abort();
+      };
     }
   }, []);
   // console.log(users);
