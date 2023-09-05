@@ -16,10 +16,33 @@ export class ClassComponent extends React.Component {
     return (
       <>
         <h3>This is a Class Component</h3>
+
         <input
+          type="text"
           value={this.state.name}
           onChange={(e) => this.setState({ name: e.target.value })}
-        ></input>
+        />
+        <br />
+        <br />
+        <button
+          onClick={() =>
+            this.setState((state) => {
+              return { age: state.age - 1 };
+            })
+          }
+        >
+          -
+        </button>
+        {this.state.age}
+        <button
+          onClick={() =>
+            this.setState((state) => {
+              return { age: state.age + 1 };
+            })
+          }
+        >
+          +
+        </button>
         <br />
         <br />
       </>
