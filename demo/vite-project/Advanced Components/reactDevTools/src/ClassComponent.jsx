@@ -1,4 +1,6 @@
 import React from "react";
+import { DisplayString } from "./DisplayString";
+
 export class ClassComponent extends React.Component {
   constructor(props) {
     super(props);
@@ -45,6 +47,7 @@ export class ClassComponent extends React.Component {
         </button>
         <br />
         <br />
+        <DisplayString />
       </>
     );
   }
