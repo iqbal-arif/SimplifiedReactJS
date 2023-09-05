@@ -1,5 +1,4 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
 import ClassComponent from "./ClassComponent";
 import FunctionComponent from "./FunctionCompnent";
 
