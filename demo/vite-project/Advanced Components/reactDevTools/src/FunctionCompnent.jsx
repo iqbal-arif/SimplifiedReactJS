@@ -1,5 +1,5 @@
 import { useState, useeEffect } from "react";
-import { DisplayString } from "./DisplayString";
+import DisplayString from "./DisplayString";
 
 export default function FunctionComponent() {
   const [name, setName] = useState("");
