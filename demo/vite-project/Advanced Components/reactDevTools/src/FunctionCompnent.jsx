@@ -10,7 +10,7 @@ export default function FunctionComponent() {
   }, [name]);
 
   return (
-    <>
+    <div>
       <h3>This is a Function Component</h3>
       <input
         value={name}
@@ -24,6 +24,6 @@ export default function FunctionComponent() {
       <br />
       <br />
       <DisplayString name={name} age={age} />
-    </>
+    </div>
   );
 }
