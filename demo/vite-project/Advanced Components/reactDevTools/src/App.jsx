@@ -1,5 +1,5 @@
 import { ClassComponent } from "./ClassComponent";
-// import { FunctionComponent } from "./FunctionCompnent";
+import { FunctionComponent } from "./FunctionCompnent";
 
 export default function App() {
   return (
@@ -7,7 +7,7 @@ export default function App() {
       <ClassComponent />
       <br />
       <br />
-      {/* <FunctionComponent /> */}
+      <FunctionComponent />
     </div>
   );
 }
