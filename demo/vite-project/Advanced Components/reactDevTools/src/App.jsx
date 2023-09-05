@@ -1,18 +1,13 @@
-import { useState } from "react";
-import ClassComponent from "./ClassComponent";
-import FunctionComponent from "./FunctionCompnent";
+import { ClassComponent } from "./ClassComponent";
+import { FunctionComponent } from "./FunctionCompnent";
 
-function App() {
-  const [count, setCount] = useState(0);
-
+export default function App() {
   return (
-    <>
-      <ClassComponent></ClassComponent>
+    <div>
+      <ClassComponent />
       <br />
       <br />
-      <FunctionComponent></FunctionComponent>
-    </>
+      <FunctionComponent />
+    </div>
   );
 }
-
-export default App;
