@@ -22,7 +22,6 @@ export default function FunctionComponent() {
       <button onClick={() => setAge((currentAge) => currentAge + 1)}>+</button>
       <br />
       <br />
-      <DisplayString name={name} age={age} />
     </div>
   );
 }
