@@ -1,11 +1,11 @@
-import { useState, useeEffect } from "react";
+import { useState, useEffect } from "react";
 import { DisplayString } from "./DisplayString";
 
 export default function FunctionComponent() {
   const [name, setName] = useState("");
   const [age, setAge] = useState(0);
 
-  useeEffect(() => {
+  useEffect(() => {
     document.title = name;
   }, [name]);
 
