@@ -47,7 +47,7 @@ export class ClassComponent extends React.Component {
         </button>
         <br />
         <br />
-        <DisplayString />
+        <DisplayString name={this.state.name} age={this.state.age} />
       </>
     );
   }
