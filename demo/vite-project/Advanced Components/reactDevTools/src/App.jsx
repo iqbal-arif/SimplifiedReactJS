@@ -1,7 +1,7 @@
 import { ClassComponent } from "./ClassComponent";
 import { FunctionComponent } from "./FunctionCompnent";
 
-export default function App() {
+function App() {
   return (
     <div>
       <ClassComponent />
@@ -11,3 +11,5 @@ export default function App() {
     </div>
   );
 }
+
+export default App;

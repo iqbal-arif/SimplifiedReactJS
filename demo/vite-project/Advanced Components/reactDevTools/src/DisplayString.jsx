@@ -1,8 +1,7 @@
-function DisplayString({ name, age }) {
+export function DisplayString({ name, age }) {
   return (
-    <p>
+    <div>
       My name is {name} and I am {age} years old
-    </p>
+    </div>
   );
 }
-export default DisplayString;
