@@ -16,7 +16,7 @@ export class ClassComponent extends React.Component {
 
   render() {
     return (
-      <>
+      <div>
         <h3>This is a Class Component</h3>
 
         <input
@@ -47,7 +47,8 @@ export class ClassComponent extends React.Component {
         </button>
         <br />
         <br />
-      </>
+        <DisplayString name={this.name} age={this.age} />
+      </div>
     );
   }
 }
