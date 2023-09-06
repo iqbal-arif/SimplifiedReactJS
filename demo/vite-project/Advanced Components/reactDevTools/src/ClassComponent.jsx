@@ -1,4 +1,5 @@
 import React from "react";
+import { DisplayString } from "./DisplayString";
 
 export class ClassComponent extends React.Component {
   constructor(props) {
