@@ -2,7 +2,7 @@ import React from "react";
 import { DisplayString } from "./DisplayString.jsx";
 import { useState, useEffect } from "react";
 
-export default function FunctionComponent() {
+export function FunctionComponent() {
   const [name, setName] = useState("");
   const [age, setAge] = useState(0);
 
