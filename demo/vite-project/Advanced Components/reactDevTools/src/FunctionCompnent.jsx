@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { DisplayString } from "./DisplayString";
 
 export default function FunctionComponent() {
   const [name, setName] = useState("");
@@ -22,6 +23,7 @@ export default function FunctionComponent() {
       <button onClick={() => setAge((currentAge) => currentAge + 1)}>+</button>
       <br />
       <br />
+      <DisplayString name={name} age={age} />
     </div>
   );
 }
