@@ -9,7 +9,7 @@ export function FunctionComponent({ favoriteNumber }) {
 
   //L34: Don't want to print Text if favoriteNumber is not defined
   let jsx;
-  if (favoriteNumber == null) {
+  if (favoriteNumber != null) {
     jsx = `My favorite number is ${favoriteNumber}`;
   }
 
@@ -35,7 +35,8 @@ export function FunctionComponent({ favoriteNumber }) {
       <br />
       {/* L34:Conditional Rendering
       Added {favoriteNumber} */}
-      <p>My favorite Number si {favoriteNumber}</p>
+      {/* <p>My favorite Number is {favoriteNumber}</p> */}
+      {jsx}
       <DisplayString name={name} age={age} />
     </div>
   );
