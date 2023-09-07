@@ -41,7 +41,7 @@ export function FunctionComponent({ favoriteNumber }) {
       {/* {jsx} */}
       {/* METHOD -2: INLINE RENDERING */}
       {/* If favoriteNumber is not NULL then print the following statement. */}
-      {favoriteNumber != null && `My favorite Number is ${favoriteNumber}`}
+      {!!favoriteNumber != null && `My favorite Number is ${favoriteNumber}`}
       <DisplayString name={name} age={age} />
     </div>
   );
