@@ -8,10 +8,11 @@ export function FunctionComponent({ favoriteNumber }) {
   const [age, setAge] = useState(0);
 
   //L34: Don't want to print Text if favoriteNumber is not defined
-  let jsx;
-  if (favoriteNumber != null) {
-    jsx = `My favorite number is ${favoriteNumber}`;
-  }
+  //METHOD - 1: for no show if props is not defined
+  // let jsx;
+  // if (favoriteNumber != null) {
+  //   jsx = `My favorite number is ${favoriteNumber}`;
+  // }
 
   useEffect(() => {
     document.title = name;
@@ -36,7 +37,10 @@ export function FunctionComponent({ favoriteNumber }) {
       {/* L34:Conditional Rendering
       Added {favoriteNumber} */}
       {/* <p>My favorite Number is {favoriteNumber}</p> */}
+      {/* METHOD - 1: for no show if props is not defined */}
       {jsx}
+      {/* METHOD -2: INLINE RENDERING */}
+      {favoriteNumber != null`My favorite Number is ${favoriteNumber}`}
       <DisplayString name={name} age={age} />
     </div>
   );
