@@ -7,6 +7,12 @@ export function FunctionComponent({ favoriteNumber }) {
   const [name, setName] = useState("");
   const [age, setAge] = useState(0);
 
+  //L34: Don't want to print Text if favoriteNumber is not defined
+  let jsx;
+  if (favoriteNumber == null) {
+    jsx = `My favorite number is ${favoriteNumber}`;
+  }
+
   useEffect(() => {
     document.title = name;
   }, [name]);
