@@ -7,7 +7,9 @@ function App() {
       <ClassComponent />
       <br />
       <br />
-      <FunctionComponent />
+      {/* L34:Conditional Rendering
+      Added {favoriteNumber} */}
+      <FunctionComponent favoriteNumber={3} />
     </div>
   );
 }

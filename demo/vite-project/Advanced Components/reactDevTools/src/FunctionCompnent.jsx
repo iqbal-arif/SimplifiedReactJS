@@ -1,8 +1,9 @@
 import React from "react";
 import { DisplayString } from "./DisplayString.jsx";
 import { useState, useEffect } from "react";
-
-export function FunctionComponent() {
+//L34:Conditional Rendering
+// Added {favoriteNumber}
+export function FunctionComponent({ favoriteNumber }) {
   const [name, setName] = useState("");
   const [age, setAge] = useState(0);
 
@@ -26,6 +27,9 @@ export function FunctionComponent() {
       <button onClick={() => setAge((currentAge) => currentAge + 1)}>+</button>
       <br />
       <br />
+      {/* L34:Conditional Rendering
+      Added {favoriteNumber} */}
+      <p>My favorite Number si {favoriteNumber}</p>
       <DisplayString name={name} age={age} />
     </div>
   );
