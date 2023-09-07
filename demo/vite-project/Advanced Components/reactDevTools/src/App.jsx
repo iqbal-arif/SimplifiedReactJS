@@ -9,7 +9,7 @@ function App() {
       <br />
       {/* L34:Conditional Rendering
       Added {favoriteNumber} */}
-      <FunctionComponent favoriteNumber={0} />
+      <FunctionComponent favoriteNumber={10} />
       {/* If favoriteNumber is not defined as a prop */}
       {/* <FunctionComponent /> */}
     </div>
