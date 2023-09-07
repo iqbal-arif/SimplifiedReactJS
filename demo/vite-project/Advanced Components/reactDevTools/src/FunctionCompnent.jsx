@@ -38,9 +38,9 @@ export function FunctionComponent({ favoriteNumber }) {
       Added {favoriteNumber} */}
       {/* <p>My favorite Number is {favoriteNumber}</p> */}
       {/* METHOD - 1: for no show if props is not defined */}
-      {jsx}
+      {/* {jsx} */}
       {/* METHOD -2: INLINE RENDERING */}
-      {favoriteNumber != null`My favorite Number is ${favoriteNumber}`}
+      {favoriteNumber != null && `My favorite Number is ${favoriteNumber}`}
       <DisplayString name={name} age={age} />
     </div>
   );
