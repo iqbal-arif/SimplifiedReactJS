@@ -40,6 +40,7 @@ export function FunctionComponent({ favoriteNumber }) {
       {/* METHOD - 1: for no show if props is not defined */}
       {/* {jsx} */}
       {/* METHOD -2: INLINE RENDERING */}
+      {/* If favoriteNumber is not NULL then print the following statement. */}
       {favoriteNumber != null && `My favorite Number is ${favoriteNumber}`}
       <DisplayString name={name} age={age} />
     </div>
