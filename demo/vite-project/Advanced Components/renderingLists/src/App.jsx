@@ -15,7 +15,11 @@ function App() {
     <>
       <h2>Rendering Lists</h2>
       <button onClick={addItem}>Add Item</button>
-      <pre>{JSON.stringify(items, null, 2)}</pre>
+      {/* Displays the pre-formatted Object in the browser */}
+      {/* <pre>{JSON.stringify(items, null, 2)}</pre> */}
+      {/* {items} variable does not display the preformatted object but instead gives error; check console*/}
+      {/* Displays item listed in array */}
+      <pre>{[1, 2, 3, 4]}</pre>
     </>
   );
 }
