@@ -20,6 +20,14 @@ function App() {
       {/* {items} variable does not display the preformatted object but instead gives error; check console*/}
       {/* Displays item listed in array */}
       <pre>{[1, 2, 3, 4]}</pre>
+      {/* Displays divs of array */}
+      <pre>{[<div>1</div>, <div>2</div>, <div>3</div>]}</pre>
+      {/* To Display Array of objects need to convert them to valid JSX items. For that use map */}
+      <pre>
+        {items.map((item) => {
+          return <div>{item.name}</div>;
+        })}
+      </pre>
     </>
   );
 }
