@@ -27,9 +27,13 @@ function App() {
         {items.map((item) => {
           return (
             <>
-              <div key={item.id}>{item.name}</div>
-              {/* With input tag, any new item with text entered will take index0 POSITION in array object. Thus console has error. See Warning in console */}
-              <input type="text"></input>
+              <div key={item.id}>
+                {item.name}
+                {/* With input tag, any new item with text entered will take index0 POSITION in array object. Thus console has error. See Warning in console */}
+                {/* This is resolved by adding key.id with each loop */}
+                {/*The key.id should not be used in Child Components  */}
+                <input type="text"></input>
+              </div>
             </>
           );
         })}
