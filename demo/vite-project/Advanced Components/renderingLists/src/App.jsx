@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Fragment, useState } from "react";
 
 function App() {
   const [items, setItems] = useState([
@@ -34,6 +34,11 @@ function App() {
                 {/*The key.id should not be used in Child Components  */}
                 <input type="text"></input>
               </div>
+
+              <Fragment key={item.id}>
+                <span>This a Fragment Example: L36</span>
+                <div>{item.name}</div>
+              </Fragment>
             </>
           );
         })}
