@@ -35,6 +35,12 @@ function App() {
                 <input type="text"></input>
               </div>
 
+              {/* This is an Example of Fragment. To See this in action diable the above code 
+              <>
+              <div key={item.id}>
+              </div>
+              </>
+              */}
               <Fragment key={item.id}>
                 <span>This a Fragment Example: L36</span>
                 <div>{item.name}</div>
