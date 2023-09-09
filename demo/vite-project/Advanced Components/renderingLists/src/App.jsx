@@ -25,7 +25,13 @@ function App() {
       {/* To Display Array of objects need to convert them to valid JSX items. For that use map */}
       <pre>
         {items.map((item) => {
-          return <div>{item.name}</div>;
+          return (
+            <>
+              <div>{item.name}</div>
+              {/* With input tag, any new item with text entered will take index0 POSITION in array object. Thus console has error. See Warning in console */}
+              <input type="text"></input>
+            </>
+          );
         })}
       </pre>
     </>
