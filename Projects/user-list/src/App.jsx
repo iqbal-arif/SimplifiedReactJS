@@ -37,14 +37,14 @@ function App() {
       controller.abort();
     };
   }, []);
-  let usersList = JSON.stringify(users);
-  usersName = usersList.name;
+  let usersList = JSON.stringify(users.name);
+  // let usersName = usersList.name;
   // usersList.map((user) => {
   //   return user;
   // });
   return (
     <>
-      {usersName}
+      {usersList}
       <h3>Rendering List through JSON API</h3>
       {/* <pre>
         {userList.map((user) => {
