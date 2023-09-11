@@ -38,11 +38,13 @@ function App() {
     };
   }, []);
   let usersList = JSON.stringify(users);
+  usersName = usersList.name;
   // usersList.map((user) => {
   //   return user;
   // });
   return (
     <>
+      {usersName}
       <h3>Rendering List through JSON API</h3>
       {/* <pre>
         {userList.map((user) => {
