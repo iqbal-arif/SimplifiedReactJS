@@ -1,35 +1,48 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState, useEffect } from "react";
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  //Setting users in useState
+  const [users, setUsers] = useState("");
+  //Defining Loading state when data is being fetched
+  const [loading, setLoading] = useState(true);
+  //Error useState
+  const [error, setError] = useState();
+  useEffect(() => {
+    //Setting loading state
+    setLoading(true);
+    setError(undefined);
+    //Setting signal, a part of controller to stop double fetching
+    const controller = new AbortController();
+    {
+      fetch("https://jsonplaceholder.typicode.com/users", {
+        signal: controller.signal,
+      })
+        .then((res) => {
+          // res.status === 200 ? res.json() : Promise.reject(res);
+          if (res.status === 200) {
+            return res.json();
+          } else {
+            return Promise.reject(res);
+          }
+        })
+        .then((json) => setUsers(json))
+        .catch((e) => {
+          if (e?.name === "AbortError") return setError(e);
+        })
+        .finally(() => {
+          setLoading(false);
+        });
+      //Cleanup
+      return () => {
+        controller.abort();
+      };
+    }
+  }, []);
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <h3>Rendering List through JSON API</h3>
+      {JSON.stringify(users)}
     </>
-  )
+  );
 }
-
-export default App
+export default App;
