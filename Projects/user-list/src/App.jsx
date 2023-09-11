@@ -38,20 +38,23 @@ function App() {
     };
   }, []);
   let usersList = JSON.stringify(users);
+  {
+    usersList.map((usr) => {
+      usr;
+    });
+  }
   // console.log(usersList);
   // let usersName = usersList.name;
-  // usersList.map((user) => {
-  //   return user;
-  // });
+  // {
+  //   usersList.map((list) => {
+  //     return list;
+  //   });
+  // }
   return (
-    <>
+    <div>
       <h3>Rendering List through JSON API</h3>
-      {JSON.stringify(
-        users.map((element) => {
-          return element;
-        })
-      )}
-    </>
+      {usersList}
+    </div>
   );
 }
 export default App;
