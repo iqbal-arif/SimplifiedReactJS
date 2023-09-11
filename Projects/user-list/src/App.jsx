@@ -46,7 +46,11 @@ function App() {
   return (
     <>
       <h3>Rendering List through JSON API</h3>
-      {usersList}
+      {JSON.stringify(
+        users.map((element) => {
+          return element;
+        })
+      )}
     </>
   );
 }
