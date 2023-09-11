@@ -13,30 +13,29 @@ function App() {
     setError(undefined);
     //Setting signal, a part of controller to stop double fetching
     const controller = new AbortController();
-    {
-      fetch("https://jsonplaceholder.typicode.com/users", {
-        signal: controller.signal,
+
+    fetch("https://jsonplaceholder.typicode.com/users", {
+      signal: controller.signal,
+    })
+      .then((res) => {
+        // res.status === 200 ? res.json() : Promise.reject(res);
+        if (res.status === 200) {
+          return res.json();
+        } else {
+          return Promise.reject(res);
+        }
       })
-        .then((res) => {
-          // res.status === 200 ? res.json() : Promise.reject(res);
-          if (res.status === 200) {
-            return res.json();
-          } else {
-            return Promise.reject(res);
-          }
-        })
-        .then((json) => setUsers(json))
-        .catch((e) => {
-          if (e?.name === "AbortError") return setError(e);
-        })
-        .finally(() => {
-          setLoading(false);
-        });
-      //Cleanup
-      return () => {
-        controller.abort();
-      };
-    }
+      .then((json) => setUsers(json))
+      .catch((e) => {
+        if (e?.name === "AbortError") return setError(e);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+    //Cleanup
+    return () => {
+      controller.abort();
+    };
   }, []);
   return (
     <>
