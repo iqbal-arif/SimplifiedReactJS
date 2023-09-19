@@ -66,15 +66,18 @@ function App() {
       <h3>Rendering List through JSON API</h3>
       <>
       <div>
+          <pre>
         <ul>
-          { usersList.map((list) => {
-           return (<li>{list.name}</li>)
-           }  ) }
-           
+          { usersList.map(
+                (list,i) => {
+                  return (<li key={i}>{list.name}</li>)}
+            )
+          }           
         </ul>
+      </pre>
       </div>
 
-      {/* <pre>{}</pre> */}
+
     </>
 
     </div>
