@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+// Teacher Method Step
+import {User} from "./User";
 
 function App() {
   //Setting users in useState
