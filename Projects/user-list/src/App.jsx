@@ -5,7 +5,7 @@ import {User} from "./User";
 function App() {
   //Setting users in useState
   // When useState() is set to Empty
-  const [users, setUsers] = useState();
+  const [users, setUsers] = useState("");
   // When useState() is set to Empty Array
   // const [users, setUsers] = useState([]);
   //Defining Loading state when data is being fetched
@@ -75,17 +75,13 @@ function App() {
       <div>
           <pre>
         <ul>
-          {/* When useState() is set to Empty then use the following code */}
-          {usersList != null & usersList.map(
-                (list,i) => {
-                  return (<li key={i}>{list.name}</li>)}
-            )}
-            {/* When useState([]) is set to Empty Array then use the following code */}
-          {/* { usersList.map(
+          
+            {/* When useState() is set to Empty then use the following code */}
+          { usersList.map(
                 (list,i) => {
                   return (<li key={i}>{list.name}</li>)}
             )
-          }            */}
+          }           
         </ul>
       </pre>
       </div>
@@ -96,9 +92,15 @@ function App() {
     <>
     <h1>User List</h1>
     <ul>
-      {users.map(user =>{
+      {/* When useState() is set to Empty then use the following code */}
+      {usersList != null && usersList.map(
+                user =>{
+                  return <User name = {user.name} />
+                })}
+        {/* When useState([]) is set to Empty then use the following code */}         
+      {/* {users.map(user =>{
         return <User name = {user.name} />
-      })}
+      })} */}
     </ul>
     </>
 
