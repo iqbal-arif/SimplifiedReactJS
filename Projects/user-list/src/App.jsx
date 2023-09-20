@@ -4,7 +4,7 @@ import {User} from "./User";
 
 function App() {
   //Setting users in useState
-  const [users, setUsers] = useState("");
+  const [users, setUsers] = useState([]);
   //Defining Loading state when data is being fetched
   const [loading, setLoading] = useState(true);
   //Error useState
@@ -87,7 +87,7 @@ function App() {
     <>
     <h1>User List</h1>
     <ul>
-      {usersList.map(user =>{
+      {users.map(user =>{
         return <User name = {user.name} />
       })}
     </ul>
