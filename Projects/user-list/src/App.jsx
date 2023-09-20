@@ -94,18 +94,18 @@ function App() {
     <h1>User List</h1>
     {/* BONUS */}
     {setLoading ? <h2>Loading.....</h2> : 
-    }
     <ul>
       {/* When useState() is set to Empty String then use the following code */}
       {/* {usersList != null && usersList.map(
-                user =>{
-                  return <User name = {user.name} />
-                })} */}
+        user =>{
+          return <User name = {user.name} />
+        })} */}
         {/* When useState([]) is set to Empty Array then use the following code */}         
       {users.map(user =>{
         return <User key={user.id} name = {user.name} />
       })}
     </ul>
+    }
     </>
 
     </div>
