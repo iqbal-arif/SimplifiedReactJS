@@ -4,6 +4,7 @@ import {User} from "./User";
 
 function App() {
   //Setting users in useState
+  // NOTE: useState(), useState(""),useState(1), and useState([]) has different effects on rendering code.
   // When useState() is set to Empty String
   // const [users, setUsers] = useState("");
   // When useState() is set to Empty Array
@@ -91,6 +92,9 @@ function App() {
     {/* Instructor Method */}
     <>
     <h1>User List</h1>
+    {/* BONUS */}
+    {setLoading ? <h2>Loading.....</h2> : 
+    }
     <ul>
       {/* When useState() is set to Empty String then use the following code */}
       {/* {usersList != null && usersList.map(
@@ -99,7 +103,7 @@ function App() {
                 })} */}
         {/* When useState([]) is set to Empty Array then use the following code */}         
       {users.map(user =>{
-        return <User name = {user.name} />
+        return <User key={user.id} name = {user.name} />
       })}
     </ul>
     </>
