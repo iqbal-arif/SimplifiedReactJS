@@ -4,7 +4,10 @@ import {User} from "./User";
 
 function App() {
   //Setting users in useState
-  const [users, setUsers] = useState([]);
+  // When useState() is set to Empty
+  const [users, setUsers] = useState();
+  // When useState() is set to Empty Array
+  // const [users, setUsers] = useState([]);
   //Defining Loading state when data is being fetched
   const [loading, setLoading] = useState(true);
   //Error useState
@@ -72,11 +75,17 @@ function App() {
       <div>
           <pre>
         <ul>
-          { usersList.map(
+          {/* When useState() is set to Empty then use the following code */}
+          {usersList != null & usersList.map(
+                (list,i) => {
+                  return (<li key={i}>{list.name}</li>)}
+            )}
+            {/* When useState([]) is set to Empty Array then use the following code */}
+          {/* { usersList.map(
                 (list,i) => {
                   return (<li key={i}>{list.name}</li>)}
             )
-          }           
+          }            */}
         </ul>
       </pre>
       </div>
