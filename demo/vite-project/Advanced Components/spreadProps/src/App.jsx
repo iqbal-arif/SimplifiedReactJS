@@ -9,7 +9,7 @@ function App() {
     setIsLoading(true)
 
     const controller = new AbortController()
-    fetch("https://jsonplaceholder.typicode.com/users", {
+    fetch("users.json", {
       signal: controller.signal,
     })
       .then(res => res.json())
