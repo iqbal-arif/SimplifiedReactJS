@@ -1,3 +1,3 @@
 export function User({name, username, email, phone}){
-    return <li>{name}, {username}, {email}, {phone}</li>
+    return <li>{name}, {email}, {phone}, {username}</li>
 }
