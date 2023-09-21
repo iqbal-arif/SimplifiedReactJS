@@ -5,10 +5,12 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
-    <h1>To Do List Project</h1>
-    </>
+  <>
+  <h1>To Do List Project</h1>
+  </>
   )
+    
+  
 }
 
 export default App
